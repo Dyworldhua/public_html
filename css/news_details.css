@@ -1,0 +1,18 @@
+.content {margin-top: 63px;}
+.title .title_top {overflow: hidden;}
+.title .title_top h2 {float: left;font-size: 24px;color: #666666;font-weight: normal;}
+.title .title_top h3 {float: right;font-size: 24px;color: #666666;font-weight: normal;}
+.title .bottom {margin-top: 8px;margin-bottom: 8px;}
+.title .bottom p {font-size: 18px;color: #999999;}
+.content .main {border-top: 1px solid #d9dada;border-bottom: 1px solid #d9dada;padding-top: 16px;padding-bottom: 8px;margin-bottom: 25px;}
+.content .main img {margin-top: 32px;margin-bottom: 31px;}
+.content .main p {margin-left: 10px;font-size: 14px;color: #999999;line-height: 25px;margin-bottom: 25px;}
+.content .flip {margin: 0 auto;margin-left:467px;margin-bottom: 34px; }
+.content .flip span {width: 99px;line-height: 24px;border: #2cd1fa solid 1px;font-size: 16px;color: #999999;text-align: center;}
+.content .flip_prev {overflow: hidden;margin-bottom: 14px;}
+.content .flip_prev span {float: left;line-height: 25px;margin-right: 8px;}
+.content .flip_prev a {font-size: 16px;color: #999999;line-height: 25px;}
+.content .flip_next {overflow: hidden;}
+.content .flip_next span {float: left;line-height: 25px;margin-right: 8px;}
+.content .flip_next a {font-size: 16px;color: #999999;line-height: 25px;}
+.content .flip a:hover span {background: #1490af;color: #fefefe;border: #1490af solid 1px;}

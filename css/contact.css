@@ -1,0 +1,24 @@
+.content {margin-top: 87px;}
+.title {margin: 0 auto;}
+.title h2 {font-size: 30px;text-align: center;color: #666666;font-weight: normal;}
+.title h3 {font-size: 20px;color: #808080;text-align: center;font-weight: normal;}
+.title h3 span {margin-left: 6px;}
+.contact {overflow: hidden;margin-top: 30px;}
+.contact_us {float: left;margin-left: 178px;margin-top: 25px;}
+.contact_us h2 {font-size: 24px;color: #666666;margin-bottom: 29px;font-weight: normal;}
+.contact_us p {font-size: 16px;color: #999999;line-height: 29px;}
+.contact_us .icon {overflow: hidden;margin: 0 auto;width: 140px;margin-top: 37px;position: relative;z-index: 999;}
+.contact_us .icon a {float: left;margin: 0 10px;background: #7b7b7b;border-radius: 13px;behavior:url(PIE.htc);}
+.contact_us .icon a:hover {background: #3d3a39;}
+.form {float: right;width: 552px;margin-right: 60px;}
+.form input {border:0; border-bottom: 1px solid #d9d9d9;width: 552px;height:45px;line-height: 45px;color: #000;font-size: 16px;color: #666666;padding-left: 8px;font-family: '微软雅黑';}
+.form textarea {font-size: 16px;color: #666666;border:0; border-bottom: 1px solid #d9d9d9;width: 552px;height: 60px;line-height: 20px;margin-top: 10px;padding-left: 8px;font-family: '微软雅黑';}
+.form .code {overflow: hidden;margin-top: 10px;margin-bottom: 23px;}
+.form .code_input {float: left;color: #666666;font-size: 16px;}
+.form .code_input input {padding-left: 8px;font-family: '微软雅黑';color: #666666;font-size: 16px;width: 158px;height: 26px;line-height: 26px;border:1px solid #c4c4c4;}
+.form .code_pic {overflow: hidden;float: right;}
+.form .code .code_pic img {float: left;cursor:pointer;margin-right:200px;}
+.form .code .code_pic a {float: left;line-height: 28px;margin-left: 9px;font-size: 16px;color: #666;}
+.form .submit {padding-left: 5px;font-family: '微软雅黑';background: #c4c4c4;width: 556px;height: 60px;font-size: 16px;color: #ffffff;cursor: pointer;}
+.footer {background: #2cd1fa;height: 60px;margin-top: 72px;}
+.footer h5 {line-height: 60px;text-align: center;font-size: 16px;color: #ffffff;}

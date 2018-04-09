@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻详情</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/news_details.css">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="top">
+				<div class="logo">
+					<a href="index.php"><img src="images/logo.png"></a>
+				</div>
+				<div class="search">
+					<form action="search.php" method="post">
+						<input name="search" type="text"/>
+						<button>搜索</button>
+					</form>
+					
+				</div>
+			</div>
+		</div>	
+		<?php require 'common.nav.html';?>
+		<div class="banner">
+			<img src="<?='backend/'.$data_banner['img_src']?>">
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+			<div class="title">
+				<div class="title_top">
+					<h2><?=$row['title']?></h2>
+					<h3><?=$row['date']?></h3>
+				</div>
+				<div class="bottom">
+					<p><?=$note_title?></p>
+				</div>
+			</div>
+			<div class="main">
+				<p><?=$note?></p>
+				<img src="<?='backend/'.$row['img_src']?>" width="1200px" height="500px"/>
+				<p><?=$row['content']?></p>
+			</div>
+			<div class="flip">
+				<div class="flip_prev">
+					<?php if(empty($row_prev)){?>
+					<a href="###"><span>上一篇</span>无</a>
+					<?php }else{?>
+					<a href="news_details.php?id=<?=$row_prev['id']?>"><span>上一篇</span><?=$row_prev['title']?></a>
+					<?php }?>
+				</div>
+				<div class="flip_next">
+					<?php if(empty($row_next)){?>
+					<a href="###"><span>下一篇</span>无</a>
+					<?php }else{ ?>
+						<a href="news_details.php?id=<?=$row_next['id']?>"><span>下一篇</span><?=$row_next['title']?></a>
+					<?php }?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<h2>景风环保科技有限公司</h2>
+			<?php require 'common.call.html';?>
+		<ul class="icon">
+			<li><a href="#"><img src="images/wb.png"></a></li>
+			<li><a href="#"><img src="images/qq.png"></a></li>
+			<li><a href="#"><img src="images/wx.png"></a></li>
+		</ul>
+		<p>沪公网安备 31011402001550号</p>
+		</div>
+	</div>
+</body>
+</html>

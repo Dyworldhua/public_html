@@ -1,0 +1,23 @@
+body{font-family: '微软雅黑';}
+.li {list-style: none;}
+.container {width: 1200px;margin: 0 auto;overflow: hidden;}
+.top {height: 78px;overflow: hidden;background: #ffffff;}
+.logo {float: left;overflow: hidden;margin-left: 19px;margin-top: 10px;}
+.search {float: right;overflow: hidden;margin-top: 25px;margin-right: 52px;}
+.search form {float: left;}
+.search form input {width: 238px;height: 35px;border:1px solid #2cd1fa;padding-left: 8px;font-family: '微软雅黑';}
+.search button {width:60px ;height:37px;background: #2cd1fa;font-size: 18px;color: #ffffff;border: 0;float: right;}
+.nav {height: 60px;background: #2cd1fa;}
+.nav ul {overflow:hidden;width:910px;margin:0 auto;}
+.nav li {float: left;width: 100px;margin:0 35px;}
+.nav li a {line-height: 60px;font-size: 18px;color:#ffffff;list-style: none;text-align: center;}
+.nav li:hover {background: #1490af;}
+.nav .current {background: #1490af;}
+.banner img {width: 100%;}
+.footer {height: 230px;background: #2cd1fa;}
+.footer h2 {font-size: 24px;color: #ffffff;font-weight: normal;margin-top: 22px;margin-bottom: 20px;margin-left: 8px;}
+.footer .call {margin-left: -192px;overflow: hidden;}
+.footer .call li {float: left;margin-left: 200px;font-size: 16px;color: #ffffff;line-height: 25px;text-align: left;width: 260px;}
+.footer .icon {overflow: hidden;margin: 0 auto;width: 140px;position:relative;z-index: 999;margin-top: 30px;margin-bottom: 28px;}
+.footer .icon li a {float: left;margin: 0 10px;background: #7b7b7b;border-radius: 13px;behavior:url(PIE.htc);}
+.footer p {font-size: 16px;color: #ffffff;line-height: 25px;text-align: center;}

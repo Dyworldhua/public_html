@@ -1,0 +1,7 @@
+.title {margin: 0 auto;}
+.title h2 {font-size: 30px;text-align: center;color: #666666;font-weight: normal;}
+.title h3 {font-size: 20px;color: #808080;text-align: center;font-weight: normal;}
+.content {margin-top: 123px;margin-bottom: 106px;}
+.content .main {overflow: hidden;margin-top: 57px;}
+.content .main p {text-indent: 2em;font-size: 14px;color: #999999;line-height: 25px;margin-top: 9px;}
+.content .main img {float: left;margin-right: 18px;}

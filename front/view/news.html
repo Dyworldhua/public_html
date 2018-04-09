@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻中心</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/news.css">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="top">
+				<div class="logo">
+					<a href="index.php"><img src="images/logo.png"></a>
+				</div>
+				<div class="search">
+					<form action="search.php" method="post">
+						<input name="search" type="text"/>
+						<button>搜索</button>
+					</form>
+				</div>
+			</div>
+		</div>	
+		<?php require 'common.nav.html';?>
+		<div class="banner">
+			<img src="<?='backend/'.$data_banner['img_src']?>">
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+			<div class="title">
+					<h2>新闻中心</h2>
+					<h3>news</h3>
+			</div>
+			<div class="news_title">
+				<ul>
+					<?php foreach($data_type as $key){?>
+					<li class="<?php if($key['id'] == $type_id){echo 'on';}?>"><a href="news.php?type=<?=$key['id']?>"><?=$key['title']?></a></li>
+					<?php }?>
+				</ul>
+			</div>
+			<div class="news_list">
+				<ul>
+                        <?php foreach($data as $val){ ?>
+					    <li>
+						<a href="news_details.php?id=<?=$val['id']?>&banner_id=<?=$banner_id?>"><img src="<?=IMG_DIR.DIR_SEPARATE.$val['img_src']?>" width="475px" height="240px"></a>
+						<div class="news_main">
+							<div class="main_top">
+								<h2><a href="news_details.php?id=<?=$val['id']?>&banner_id=<?=$banner_id?>"><?php echo $val['title'];?></a></h2>
+								<h3><?php echo $val['date'];?></h3>
+							</div>
+							<div class="bottom">
+								<p><?php echo $val['note'];?></p>
+							</div>
+						</div>
+                        </li>
+                        <?php }?>
+                        
+					</ul>
+				</div>
+				<div class="page">
+					<ul>
+						<?php if($page_max > 1){ ?>
+						<li class="prev"><a href="news.php?page=<?php if(($current_page-1)>0){echo $current_page-1;}else{echo 1;}?>">上一页</a></li>
+                        <?php for($i=1;$i<=$page_max;$i++){?>
+                        <li class=<?php if($current_page==$i){echo "current";}else{echo "";}?>><a href="news.php?page=<?=$i;?>"><?= $i;?></a></li>
+                        <?php } ?>
+						<li class="next"><a href="news.php?page=<?php if(($current_page+1)<=$page_max){echo $current_page+1;}else{echo $page_max;}?>">下一页</a></li>
+						<?php }?>
+					</ul>
+		</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<h2>景风环保科技有限公司</h2>
+			<?php require 'common.call.html';?>
+		<ul class="icon">
+			<li><a href="#"><img src="images/wb.png"></a></li>
+			<li><a href="#"><img src="images/qq.png"></a></li>
+			<li><a href="#"><img src="images/wx.png"></a></li>
+		</ul>
+		<p>沪公网安备 31011402001550号</p>
+		</div>
+	</div>
+</body>
+</html>

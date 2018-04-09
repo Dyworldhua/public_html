@@ -1,0 +1,7 @@
+<div class="nav">
+        <ul>
+            <?php foreach($nav as $key){?>
+            <li class="<?php if($banner_id == $key['id']){echo 'current';}?>"><a href="<?=$key['href']?>?id=<?=$key['id']?>"><?=$key['nav_name']?></a></li>
+            <?php }?>
+        </ul>
+    </div>

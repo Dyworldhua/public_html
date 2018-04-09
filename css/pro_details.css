@@ -1,0 +1,7 @@
+.content .pic img {margin: 0 auto;margin-top:48px;}
+.content .main {margin-left: 55px;margin-bottom: 72px;margin-top: 83px;}
+.content .main_top h2 {font-size: 20px;color: #666666;margin-bottom: 15px;font-weight: normal;}
+.content .main_top p {font-size: 18px;color: #999999;line-height: 28px;}
+.content .main_bottom li h2 {font-size: 18px;color: #999999;margin-top: 20px;font-weight: normal;}
+.content .main_bottom ul {overflow: hidden;margin-left: -20px;}
+.content .main_bottom li {float:left;margin-left: 20px;width: 360px;}

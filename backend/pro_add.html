@@ -1,0 +1,65 @@
+<?php
+    $db_link = mysqli_connect('localhost','root','','project');
+    mysqli_query($db_link,"set names utf8");
+    $sql = "select * from pro_type";
+    $result = mysqli_query($db_link,$sql);
+    $data = [];
+    while($row = mysqli_fetch_assoc($result)){
+        $data[] = $row;
+    }
+?>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <style>
+            h2{
+                font-weight:normal;
+                text-align: center;
+            }
+            .content{
+                width:400px;
+                height:400px;
+                margin-left:430px;
+            }
+            input[type=text]{
+                border:1px solid #000;
+                padding-left:5px;
+            }
+            input[type=date]{
+                border:1px solid #000;
+            }
+            input[type=submit]{
+                margin-left:130px;
+                cursor:pointer;
+            }
+        </style>
+        <script type="text/javascript" src="../plugins/jquery-1.11.3.js"></script>
+        <script type="text/javascript" charset="utf-8" src="../plugins/ueditor.config.js"></script>
+        <script type="text/javascript" charset="utf-8" src="../plugins/ueditor.all.min.js"></script>
+    </head>
+    <body>
+        <h2>产品添加</h2>
+        <div class="content">
+            <from action="pro_add.php" method="POST" enctype="multipart/form-data">
+                <p>产品名称：<input type="text" name="title"/></p>
+                <p>产品类别：
+                    <select>
+                        <?php foreach($data as $val){?>
+                        <option><?=$val['type']?></option>
+                        <?php }?>
+                    </select>
+                </p>
+                <p>产品内容：</p>
+                <textarea id="editor" name="content"></textarea>
+                <p>产品图片：<input type="file" name="img"/></p>
+                <p>添加人员：</p>
+                <p>添加时间：<input type="date" name="date"/></p>
+                <p><input type="submit" value="添加产品"/></p>
+            </from>
+        </div>
+    </body>
+    <script type="text/javascript">
+	    var ue = UE.getEditor('editor');
+    </script>
+</html>

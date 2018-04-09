@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品详情</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/pro_details.css">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="top">
+				<div class="logo">
+					<a href="index.php"><img src="images/logo.png"></a>
+				</div>
+				<div class="search">
+					<form action="search.php" method="post">
+						<input name="search" type="text"/>
+						<button>搜索</button>
+					</form>
+				</div>
+			</div>
+		</div>	
+		<?php require 'common.nav.html';?>
+		<div class="banner">
+			<img src="<?='backend/'.$data_banner['img_src']?>">
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+		<div class="pic">
+			<img src="<?='backend/'.$row['img_src']?>" width="387px" height="464px"/>
+		</div>
+		<div class="main">
+			<div class="main_top">
+				<h2>品牌名称：景风</h2>
+				<p><?=$row['content']?></p>
+				
+			</div>
+			<div class="main_bottom">
+				<ul>
+					<li><h2>产品名称：<?=$row['name']?></h2></li>
+					<li><h2>保修期: <?=$del['date']?></h2></li>
+					<li><h2>净水器品牌: <?=$del['brand']?></h2></li>
+					<li><h2>型号: <?=$del['model']?></h2></li>
+					<li><h2>分类: <?=$del['classify']?></h2></li>
+					<li><h2>类型:<?=$del['type']?></h2></li>
+					<li><h2>涉水批件批准文号: <?=$del['num']?></h2></li>
+					<li><h2>生产企业: <?=$del['company']?></h2></li>
+					<li><h2>颜色分类: <?=$del['color']?></h2></li>
+					<li><h2>滤芯: <?=$del['lvxin']?></h2></li>
+					<li><h2>使用位置: <?=$del['position']?></h2></li>
+					<li><h2>功效: <?=$del['effect']?></h2></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<h2>景风环保科技有限公司</h2>
+			<?php require 'common.call.html';?>
+		<ul class="icon">
+			<li><a href="#"><img src="images/wb.png"></a></li>
+			<li><a href="#"><img src="images/qq.png"></a></li>
+			<li><a href="#"><img src="images/wx.png"></a></li>
+		</ul>
+		<p>沪公网安备 31011402001550号</p>
+		</div>
+	</div>
+</body>
+</html>

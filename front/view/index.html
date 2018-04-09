@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script type="text/javascript" src="js/banner.js"></script>
+	<script type="text/javascript">
+		$(function(){ $('input, textarea') .placeholder(); });
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="top">
+				<div class="logo">
+					<a href="index.php"><img src="images/logo.png"></a>
+				</div>
+				<div class="search">
+					<form action="search.php" method="post">
+						<input name="search" type="text"/>
+						<button>搜索</button>
+					</form>
+				</div>
+			</div>
+		</div>	
+		<?php require 'common.nav.html';?>
+		<div class="banner" style="margin:0 auto;">
+			<ul class="pic">
+					<?php foreach($data_type as $val){?>
+					<li><a href="#" target="_blank"><img src="<?='backend/'.$val['img_src']?>" height="445px"/></a></li>
+					<?php } ?>
+					<!--
+					<li><a href="#" target="_blank"><img src="images/banner2.png"/></a></li>
+					<li><a href="#" target="_blank"><img src="images/banner3.png"/></a></li>
+					-->
+			</ul>
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+			<ul class="hd">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+			<div class="product">
+				<div class="title">
+					<h2>产品中心</h2>
+					<h3>product</h3>
+				</div>
+				<div class="pro_list_top">
+					<ul>
+						<?php foreach($pro_type_data as $pro_type_val){ ?>
+						<li class="<?php if($type_id == $pro_type_val['id']){echo 'current';}?>"><a href="index.php?type_id=<?=$pro_type_val['id']?>"><?=$pro_type_val['type']?></a></li>
+						<?php }?>
+						<!--
+						<li><a href="#">管机线</a></li>
+						<li><a href="#">超漏RO</a></li>
+						<li><a href="#">茶吧机</a></li>
+						<li><a href="#">中净中饮</a></li>
+						<li><a href="#">饮水台</a></li>
+						-->
+					</ul>
+				</div>
+				 <div class="product_list">
+                	<div class="picScroll-left">
+
+                        <div class="bd">
+                            <ul class="picList">
+									<?php foreach($pro_list_data as $pro_list_val){?>
+                                    <li><a href="pro_details.php?id=<?=$pro_list_val['id']?>"><img src="<?='backend/'.$pro_list_val['img_src']?>" width="213px" height="273px"/></a><p><a href="pro_details.php?id=<?=$pro_list_val['id']?>"><?=$pro_list_val['name']?></a></p></li>
+									<?php }?>
+									<!--
+									<li><a href="pro_details.html"><img src="images/pro_list2.png"></a><p><a href="pro_details.html">NS-FZ2 （怡口款）</a></p></li>
+                                    <li><a href="pro_details.html"><img src="images/pro_list3.png"></a><p><a href="pro_details.html">NS-FS3 （3M款）</a></p></li>
+                                    <li><a href="pro_details.html"><img src="images/pro_list4.png"></a><p><a href="pro_details.html">NS-FC1 （水丽款）</a></p></li>
+									-->
+							</ul>
+                        </div>
+                        <div class="hd">
+
+                            <a class="prev" href="javascript:void(0)"></a>
+							<a class="next" href="javascript:void(0)"></a>
+
+                        </div>
+                    </div>
+                </div>
+				<a class="more" href="product.html">MORE</a>
+			</div>
+			<div class="news">
+				<div class="title">
+					<h2>新闻中心</h2>
+					<h3>news</h3>
+				</div>
+				<div class="news_title">
+					<ul>
+						<?php foreach($new_type_data as $new_type_val){?>
+						<li class="<?php if($new_type == $new_type_val['id']){echo 'on';}?>"><a href="index.php?new_type=<?=$new_type_val['id']?>"><?=$new_type_val['title']?></a></li>
+						<?php }?>
+						
+					</ul>
+				</div>
+				<div class="news_list">
+					<div class="list_left">
+						<ul>
+							<?php foreach($new_data as $key=>$new_val){?>
+							<li>
+							<div class="number"><?=$key+1?></div>
+							<div class="main">
+							<h2><a href="news_details.php?id=<?=$new_val['id']?>"><?=$new_val['title']?></a> </h2>
+							<p><?=$new_val['note']?></p></div>
+							</li>
+							<?php }?>
+						</ul>
+					</div>
+					<div class="list_right">
+						<a href="news_details.php"><img src="images/news_list_pic.jpg"></a>
+					</div>
+				</div>
+				<a class="more" href="news.php">MORE</a>
+			</div>
+			<div class="about">
+				<div class="title">
+					<h2>关于我们</h2>
+					<h3>about<span>us</span></h3>
+				</div>
+				<div class="main">
+					<div class="about_thumb">
+						<a href="about.php"><img src="images/about_main_pic.jpg"></a>
+					</div>
+					<div class="text">
+						<p>景风环保科技有限公司是一家从事研发、生产、销售为一体的现代化高科技企业。公司本着为人类提供健康、安全、方便、时尚的饮用水为宗旨，以强大的科研力量为基础，利用全球最先进的水处理技术，成功的研发出品种规格齐全的、专业的家用，商用，直饮机，磁化机，净水器，沐浴器等系列产品。本公司获得AAA级信誉、3.15诚信企业等荣誉……</p>
+						<a href="about.php">MORE</a>
+					</div>
+				</div>
+			</div>
+			<div class="contact">
+				<div class="title">
+					<h2>联系我们</h2>
+					<h3>contact&nbsp;us</h3>
+				</div>
+				<div class="contact_left">
+					<form action="message.php" method="POST">
+						<input type="text"placeholder="姓名" name="name">
+						<input type="text"placeholder="邮箱" name="email">
+						<input type="text"placeholder="电话" name="phone">
+						<textarea placeholder="内容" name="content"></textarea>
+						<input class="submit" type="submit" value="提交">
+					</form>
+				</div>
+				<div class="contact_right">
+				<img src="images/contact_pic.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<h2>景风环保科技有限公司</h2>
+		<?php require 'common.call.html';?>
+		<ul class="icon">
+			<li><a href="#"><img src="images/wb.png"></a></li>
+			<li><a href="#"><img src="images/qq.png"></a></li>
+			<li><a href="#"><img src="images/wx.png"></a></li>
+		</ul>
+		<p>沪公网安备 31011402001550号</p>
+		</div>
+	</div>
+	<!--[if IE]> 
+    <script>  
+        $(function(){  
+            $('input[placeholder]').placeholder();
+            $('textarea[placeholder]').placeholder();   
+        });  
+    </script>  
+<![endif]-->
+</body>
+</html>

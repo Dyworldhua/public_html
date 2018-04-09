@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品中心</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/product.css">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="top">
+				<div class="logo">
+					<a href="index.php"><img src="images/logo.png"></a>
+				</div>
+				<div class="search">
+					<form action="search.php" method="post">
+						<input name="search" type="text" value="<?=$_SESSION['search']?>"/>
+						<button>搜索</button>
+					</form>
+					
+				</div>
+			</div>
+		</div>	
+		<?php require 'common.nav.html';?>
+		<div class="banner">
+			<img src="<?='backend/'.$data_banner['img_src']?>">
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+		<div class="title">
+			<h2>产品中心</h2>
+			<h3>product</h3>
+		</div>
+		<!--
+		<dic class="sidebar">
+			<ul>
+				<?php foreach($data_type as $val){?>
+				<li class="<?php if($val['id']==$type_id){echo 'current';}?>"><a href="product.php?pro=<?=$val['id']?>"><?=$val['type']?></a></li>
+				<?php }?>
+			</ul>
+		</dic>
+	-->
+		<div class="pro_list">
+			<ul>
+				<?php foreach($pro_data as $pro_val){ ?>
+				<li>
+					<a href="pro_details.php?id=<?=$pro_val['id']?>&banner_id=<?=$banner_id?>"><img src="<?=IMG_DIR.'/'.$pro_val['img_src']?>" width="378px" height="378px"/></a>
+					<h3><a href="pro_details.php?id=<?=$pro_val['id']?>"><?=$pro_val['name']?></a></h3>
+				</li>
+				<?php } ?>
+				<!--
+				<li>
+					<a href="pro_details.html"><img src="images/pro_list_pic2.jpg"></a>
+					<h3><a href="">MRC1795A-75G</a></h3>
+				</li>
+				<li>
+					<a href="pro_details.html"><img src="images/pro_list_pic3.jpg"></a>
+					<h3><a href="">JST-R302E</a></h3>
+				</li>
+				<li>
+					<a href="pro_details.html"><img src="images/pro_list_pic4.jpg"></a>
+					<h3><a href="">QQ-T1</a></h3>
+				</li>
+				<li>
+					<a href="pro_details.html"><img src="images/pro_list_pic5.jpg"></a>
+					<h3><a href="">HSW-PF1</a></h3>
+				</li>
+				<li>
+					<a href="pro_details.html"><img src="images/pro_list_pic6.jpg"></a>
+					<h3><a href="">QZBW20S-12</a></h3>
+				</li>-->
+			</ul>
+		</div>
+		<?php if(!empty($pro_data)){?>
+		<div class="page">
+			<ul>
+				<li class="prev"><a href="search.php?page=<?php if($current_page-1>=1){echo $current_page-1;}else{echo 1;}?>">上一页</a></li>
+				<?php for($i=1;$i<=$search_max;$i++){?>
+				<li class="<?php if($current_page==$i){echo 'current';}?>"><a href="search.php?page=<?=$i?>&pro=<?=$type_id?>"><?=$i?></a></li>
+				<?php }?>
+				<!--
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				-->
+				<li>...</li>
+				<li class="next"><a href="search.php?page=<?php if($current_page+1<=$pro_max){echo $current_page+1;}else{echo $pro_max;}?>">下一页</a></li>
+			</ul>
+		</div>
+		<?php } ?>
+		</div>
+	</div>
+	<div class="footer" style="margin-top:100px;">
+		<div class="container">
+			<h2>景风环保科技有限公司</h2>
+			<?php require 'common.call.html';?>
+		<ul class="icon">
+			<li><a href="#"><img src="images/wb.png"></a></li>
+			<li><a href="#"><img src="images/qq.png"></a></li>
+			<li><a href="#"><img src="images/wx.png"></a></li>
+		</ul>
+		<p>沪公网安备 31011402001550号</p>
+		</div>
+	</div>
+</body>
+</html>

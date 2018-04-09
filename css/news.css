@@ -1,0 +1,28 @@
+.content {margin-top: 52px;}
+.title {margin: 0 auto;}
+.title h2 {font-size: 30px;text-align: center;color: #666666;font-weight: normal;}
+.title h3 {font-size: 20px;color: #808080;text-align: center;font-weight: normal;}
+.news_title {overflow: hidden;width: 400px;margin: 0 auto;margin-bottom: 36px;margin-top: 26px;}
+.news_title ul {overflow: hidden;}
+.news_title li {float: left;width: 200px;line-height: 40px;background: #808080;font-weight: normal;}
+.news_title li a {line-height: 40px;font-size: 24px;text-align: center;font-weight: normal;color: #fff;}
+.news_title .on {float: left;width: 200px;line-height: 40px;background: #1490af;font-weight: normal;}
+.news_title .on a {line-height: 40px;font-size: 24px;text-align: center;font-weight: normal;color: #fff;}
+.news_list ul {margin-left: 7px;margin-right: 9px;}
+.news_list li {overflow: hidden;margin-bottom: 16px;padding: 7px 7px 7px 7px;}
+.news_list li:hover {box-shadow: 0 0 10px #ccc;}
+.news_list li a img {float: left;margin-right: 20px;}
+.news_list .main {float: left;}
+.news_list .main_top {overflow: hidden;margin-top: 30px;margin-bottom: 16px;}
+.news_list .main_top h2 {float: left;font-weight: normal;}
+.news_list .main_top h2 a {font-size: 24px;color: #666666;font-weight: normal;}
+.news_list .main_top h3 {font-size: 24px;color: #666666;float: right;font-weight: normal;}
+.news_list .bottom p {text-indent: 2em;font-size: 16px;color: #999999;line-height: 28px;}
+.content .page {margin: 0 auto;width: 318px;margin-bottom: 98px;margin-top: 46px;}
+.content .page ul {overflow: hidden;margin-left: -13px;}
+.content .page li {float: left;margin-left: 13px;background: #33ccff;width: 30px;font-size: 14px;line-height: 30px;color: #ffffff;text-align: center;}
+.content .page .prev {width: 60px;}
+.content .page .next {width: 60px;}
+.content .page li a {font-size: 14px;line-height: 30px;color: #ffffff;text-align: center;}
+.content .page .current {background: #1490af;}
+.content .page li:hover {background: #1490af;}

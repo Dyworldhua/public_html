@@ -1,0 +1,78 @@
+.banner { position: relative; width:100%; overflow: hidden; }
+.banner .pic{ position:relative; z-index:0; }
+.banner .pic img {width: 100%; display: block; }
+.banner .hd { width:100%; position: absolute; bottom: 10px; text-align: center; font-size:0; z-index:1; }
+.banner .hd li{margin: 0 5px; background: url(../images/dot.png) no-repeat 0 -16px; height: 16px; overflow: hidden; width: 16px; cursor: pointer;display:inline-block; *display:inline; zoom:1;}
+.banner .hd .on{ background-position:0 0; }
+
+.banner .prev,
+.banner .next { width: 30px; height: 60px; margin: -60px 0 0;  position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; filter:alpha(opacity=20);opacity:0.2;}
+.banner .prev { left: 111px; background: url(../images/banner_left_hei.png) no-repeat;}
+.banner .next { right:111px; background: url(../images/banner_right_hei.png) no-repeat rihgt;}
+.banner .prev:hover { filter:alpha(opacity=50) !important;opacity:1 !important; background: url(../images/banner_left_lan.png) no-repeat;}
+.banner .next:hover { filter:alpha(opacity=50) !important;opacity:1 !important; background: url(../images/banner_right_lan.png) no-repeat rihgt;}
+
+.title {margin: 0 auto;}
+.title h2 {font-size: 30px;text-align: center;color: #666666;font-weight: normal;}
+.title h3 {font-size: 20px;color: #808080;text-align: center;font-weight: normal;}
+.title h3 span {margin-left: 6px;}
+.product {overflow: hidden;margin-bottom: 120px;margin-top: 122px;}
+
+.picScroll-left{ width:100%;  overflow:hidden; position:relative;}
+.picScroll-left .hd{overflow:hidden; font-size:100px; text-align:center; margin:0 auto; width:96px;z-index: 89;}
+.picScroll-left .hd a {color:#808080; padding:0 7px;}
+.picScroll-left .hd .prev,.picScroll-left .hd .next{  width: 30px; height: 60px;   position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; filter:alpha(opacity=20);opacity:0.2;display:block; margin-top:-30px;
+ cursor:pointer;position: absolute;top:50%;}
+.picScroll-left .hd .next {right:1px;z-index: 889;background: url(../images/banner_right_hei.png) no-repeat right;}
+.picScroll-left .hd .prev {left:1px;z-index: 889;background: url(../images/banner_left_hei.png) no-repeat;}
+.picScroll-left .hd .prev:hover { filter:alpha(opacity=50) !important;opacity:1 !important; background: url(../images/banner_left_lan.png) no-repeat;}
+.picScroll-left .hd .next:hover { filter:alpha(opacity=50) !important;opacity:1 !important; background: url(../images/banner_right_lan.png) no-repeat rihgt;}
+.picScroll-left .bd ul{ overflow:hidden; zoom:1; height: 327px;}
+.picScroll-left .bd ul li{ width: 215px !important; margin:0 42.5px; float:left; _display:inline; text-align:center; margin-top: 5px;}
+.picScroll-left .bd ul li img { border:#cecece 1px solid;} 
+.picScroll-left .bd ul li p {margin-top: 17px;}
+.picScroll-left .bd ul li p a{ font-size:14px; color:#161616;text-align: center;}
+.picScroll-left .bd ul li:hover img { border:#fff 1px solid;box-shadow: 0 0 10px #cecece;behavior:url(PIE.htc); }
+.picScroll-left .bd ul li img {position: relative;z-index: 800; behavior:url(PIE.htc);}
+.pro_list_top ul {overflow: hidden;margin: 0 auto;width: 756px;margin-top: 33px;margin-bottom: 38px;}
+.pro_list_top .current {background: #1490af;}
+.pro_list_top .current a {color: #ffffff;}
+.pro_list_top li {float: left;font-size: 14px;color: #808080;text-align: center;list-style: none;margin:0 29px;width: 68px;line-height: 28px;}
+.pro_list_top li a {font-size: 14px;color: #808080;text-align: center;}
+.pro_list_top li:hover {background: #1490af;}
+.pro_list_top li:hover a {color: #ffffff;}
+.product .more {font-size: 16px;color: #ffffff;text-align: center;width: 120px;line-height: 40px;background: #1490af;margin: 0 auto;margin-top: 50px;}
+.news {margin-bottom: 120px;}
+.news_title {overflow: hidden;width: 400px;margin: 0 auto;margin-bottom: 34px;margin-top: 60px;}
+.news_title ul {overflow: hidden;}
+.news_title li {float: left;width: 200px;line-height: 40px;background: #808080;}
+.news_title li a {font-size: 24px;text-align: center;color: #fff;font-weight: normal;}
+.news_title .on {float: left;width: 200px;background: #1490af;}
+.news_title .on a {line-height: 40px;text-align: center;color: #fff;font-weight: normal;font-size: 24px;}
+.news_list {overflow: hidden;}
+.list_left {overflow: hidden;float: left;width: 510px;margin-left: 60px;}
+.list_left ul {margin-bottom: -18px;}
+.list_left li {overflow: hidden;margin-bottom: 18px;}
+.list_left li:hover .main h2 a {color: #1490af;}
+.list_left li:hover .main p  {color: #1490af;}
+.list_left .number {float: left;font-size: 70px;color: #cfcfcf; line-height: 67px;}
+.list_left .main {float: right;width: 460px;}
+.list_left .main h2 {font-size: 14px;color: #333333;margin-top: 8px;margin-bottom: 4px;font-weight: normal;}
+.list_left .main h2 a {font-size: 14px;color: #333333;font-weight: normal;}
+.list_left .main p {font-size: 12px;color: #808080;line-height: 20px;}
+.list_right {float: right;margin-right: 16px;}
+.list_left .main p {font-size: 12px;color: #808080;}
+.news .more {font-size: 16px;color: #ffffff;text-align: center;width: 120px;line-height: 40px;background: #909090;margin: 0 auto;margin-top:47px;}
+.about {margin-bottom: 60px;}
+.about .main {overflow: hidden;margin-top: 105px;}
+.about .about_thumb {float: left;margin-left: 70px;}
+.about .text {float: left;margin-left: 53px;margin-top: }
+.about .text p {font-size: 18px;color: #666666;width: 486px;line-height: 32px;margin-top: 72px;}
+.about .text a {font-size: 16px;color: #ffffff;text-align: center;width: 120px;line-height: 40px;background: #909090;margin: 0 auto;margin-top: 41px;}
+.contact {overflow: hidden;margin-bottom: 60px;margin-top: 173px;}
+.contact .title {margin-bottom:35px; }
+.contact_left {float: left;width: 552px;margin-left: 70px;}
+.contact_left input {padding-left: 7px;font-family: '微软雅黑';border:0; border-bottom: 1px solid #d9d9d9;width: 552px;height: 45px;line-height: 45px;font-size: 16px;color: #666666;}
+.contact_left textarea {padding-left: 7px;font-family: '微软雅黑';border:0; border-bottom: 1px solid #d9d9d9;width: 552px;height: 70px;line-height: 25px;font-size: 16px;color: #666666;}
+.contact_left .submit {padding-left: 7px;font-family: '微软雅黑';width: 555px;height: 60px;line-height: 60px;font-size: 16px;color: #ffffff;background: #c4c4c4;border: 0;margin-top: 42px;cursor:pointer;}
+.contact_right {float: right;margin-right: 95px;}

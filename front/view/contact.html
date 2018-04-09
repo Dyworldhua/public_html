@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>联系我们</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="top">
+				<div class="logo">
+					<a href="index.php"><img src="images/logo.png"></a>
+				</div>
+				<div class="search">
+					<form action="search.php" method="post">
+						<input name="search" type="text"/>
+						<button>搜索</button>
+					</form>
+					
+				</div>
+			</div>
+		</div>	
+		<?php require 'common.nav.html';?>
+		<div class="banner">
+			<img src="<?='backend/'.$row['img_src']?>">
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+		<div class="title">
+			<h2>联系我们</h2>
+			<h3>contact<span>us</span></h3>
+		</div>
+		<div class="contact">
+			<div class="contact_us">
+				<h2>景风环保科技有限公司</h2>
+				<p>地址：<?=$infor_val['address']?></p>
+				<p>传真：<?=$infor_val['fax']?></p>
+				<p>电话：<?=$infor_val['telephone']?></p>
+				<p>手机：<?=$infor_val['phone']?></p>
+				<p>邮编：<?=$infor_val['post']?></p>
+				<p>邮箱：<?=$infor_val['email']?></p>
+				<div class="icon">
+					<a href="#"><img src="images/wb.png"></a>
+					<a href="#"><img src="images/qq.png"></a>
+					<a href="#"><img src="images/wx.png"></a>
+				</div>
+			</div>
+			<div class="form">
+				<form action="message.php" method="POST">
+					<input type="text" placeholder ="姓名" name="name">
+					<input type="text" placeholder ="邮箱" name="email">
+					<input type="text" placeholder ="电话" name="phone">
+					<textarea placeholder="内容" name="content"></textarea>
+				<div class="code">
+					<div class="code_input">
+						验证码<input type="text" name="code">
+					</div>
+					<div class="code_pic">
+						<img src="backend/code.php" onclick="this.src='backend/code.php'+'?'+Math.random()" width="80px" height="40px"/>
+					</div>	
+				</div>
+				<input class="submit" type="submit" value="提交">
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="footer">
+		<h5>沪公网安备 31011402001550号</h5>
+	</div>
+
+
+
+<!--[if IE]> 
+    <script>  
+        $(function(){  
+            $('input[placeholder]').placeholder();
+            $('textarea[placeholder]').placeholder();   
+        });  
+    </script>  
+<![endif]-->
+	
+</body>
+</html>
