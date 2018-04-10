@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h2{
+            font-weight:normal;
+            text-align:center;
+        }
+        table{
+            margin:0 auto;
+            text-align: center;
+        }
+        h3{
+            font-weight:normal;
+            text-align:center;
+        }
+        a{
+            color:#000;
+            text-decoration:none;
+        }
+        a:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2>导航栏管理</h2>
+    <h3><a href="{:url('Indexmanage/Index_nav_add')}">添加导航栏</a></h3>
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>导航ID</td>
+            <td>导航栏名称</td>
+            <td>导航栏操作</td>
+        </tr>
+        {volist name='nav' id='val'}
+        <tr>
+                <td>{$val.id}</td>
+                <td>{$val.title}</td>
+                <td><a href="{:url('Index_nav_edit')}?id={$val.id}">编辑</a>|<a href="{:url('delete')}?id={$val.id}">删除</a></td>
+            </tr>
+        {/volist}
+    </table>
+</body>
+</html>

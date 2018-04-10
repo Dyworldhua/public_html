@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h2{
+            font-weight:normal;
+            text-align:center;
+        }
+        table{
+            margin:0 auto;
+            text-align: center;
+        }
+        td{
+            width:100px;
+            overflow: hidden;
+        }
+        tr td img{
+            display: block;
+        }
+        /* tr td:nth-child(5n) img{
+            vertical-align: top;
+            float:left;
+            margin-left:14px;
+        } */
+        tr td:first-child+td+td+td+td img{
+            vertical-align: top;
+            float:left;
+            margin-left:10px;
+        }
+        td a{
+            color:#000;
+        }
+        td a:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2>产品中心</h2>
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>产品ID</td>
+            <td>产品名称</td>
+            <td>产品售价</td>
+            <td>产品图片</td>
+            <td>产品库存</td>
+            <td>产品月销量</td>
+            <td>产品评价</td>
+            <td>产品积分</td>
+            <td>产品操作</td>
+        </tr>
+        {volist name='product' id='val'}
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.title}</td>
+            <td>{$val.price}</td>
+            <td>
+                <img src="__UPLOAD__{$val.picture}" width="100px" height="100px"/>
+            </td>
+            <td>{$val.stock}</td>
+            <td>{$val.sale}</td>
+            <td>{$val.score}</td>
+            <td>{$val.integral}</td>
+            <td><a href="{:url('Proedit/pro_edit')}?id={$val.id}">编辑</a>|<a href="{:url('Prodelete/delete')}?id={$val.id}">删除</a></td>
+        </tr>
+        {/volist}
+    </table> 
+</body>
+</html>

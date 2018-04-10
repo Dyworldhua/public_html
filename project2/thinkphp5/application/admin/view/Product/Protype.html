@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h2{
+            text-align:center;
+            font-weight:normal;
+        }
+        h3{
+            text-align:center;
+            font-weight:normal;
+        }
+        table{
+            margin:0 auto;
+            text-align:center;
+        }
+        td{
+            width:150px;
+        }
+        a{
+            color:#000;
+            text-decoration:none;
+        }
+        .page{
+            margin-left:576px;
+            margin-top:30px;
+        }
+        .page a.current{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2>首页分类管理</h2>
+    <h3><a href="{:url('typeadd')}">添加分类</a></h3>
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>分类ID</td>
+            <td>分类名称</td>
+            <td>分类级别</td>
+            <td>分类操作</td>
+        </tr>
+        {volist name='type' id='val'}
+        
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.type}</td>
+            <td>{if condition="empty($val['type_name'])"}一级分类
+                {else /}{$val.type_name}
+                {/if}
+            </td>
+            <td><a href="{:url('type_edit')}?id={$val.id}">编辑</a><a href="{:url('delete')}?id={$val.id}">删除</a></td>
+        </tr>
+        {/volist}
+    </table>
+    <div class="page">
+    <a href="{:url('Protype')}?page=<?php if($current_page-1>0){echo $current_page-1;}else{echo 1;}?>">上一页</a>
+    {for start="1" end="$page_max+1"}
+    <a href="{:url('Protype')}?page={$i}" class="<?php if($current_page==$i){echo 'current';}?>">{$i}</a>
+    {/for}
+    <a href="{:url('Protype')}?page=<?php if($current_page+1<=$page_max){echo $current_page+1;}else{echo $page_max;}?>">下一页</a>
+    </div>
+</body>
+</html>

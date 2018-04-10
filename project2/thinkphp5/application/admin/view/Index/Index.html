@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>后台管理</title>
+        <link rel="stylesheet" type="text/css" href="__STATIC__/__CSS1__/backend_index.css"/>
+    </head>
+    <body>
+        <div class="top">
+            <div class="logo">
+                <a href="index.html"><img src="../images/logo.png"/></a>
+            </div>
+            <div class="backend">
+                <a href="###">登录</a>
+                <a href="###">退出</a>  
+            </div>
+        </div>
+        <div class="title">
+            <p>后台管理系统</p>
+        </div>
+        <div class="down">
+            <div class="nav">
+                <!-- <dl>
+                    <dt>新闻管理</dt>
+                    <dd><a href="###" target="main">新闻列表</a></dd>
+                    <dd><a href="###" target="main">添加新闻</a></dd>
+					<dd><a href="###" target="main">新闻类型</a></dd>
+                </dl> -->
+                <dl>
+                    <dt>产品中心</dt>
+                    <dd><a href="{:url('Product/product')}" target="main">产品列表</a></dd>
+                    <dd><a href="{:url('Proadd/pro_add')}" target="main">添加产品</a></dd>
+                    <dd><a href="{:url('Product/pro_type')}" target="main">产品分类</a></dd>
+                    <dd><a href="{:url('Product/protype')}" target="main">首页分类</a></dd>
+                </dl>
+                <dl>
+                    <dt>首页管理</dt>
+                    <dd><a href="{:url('Indexmanage/Index_nav')}" target="main">导航栏管理</a></dd>
+                </dl>
+                <!-- <dl>
+                    <dt>留言管理</dt>
+                    <dd><a href="###" target="main">留言列表</a></dd>
+                </dl>
+                <dl>
+                    <dt>Banner管理</dt>
+                    <dd><a href="###" target="main">Banner列表</a></dd>
+                    <dd><a href="###" target="main">添加Banner</a></dd>
+                </dl>
+                <dl>
+                    <dt>公司信息管理</dt>
+                    <dd><a href="###" target="main">公司信息列表</a></dd>
+					<dd><a href="###" target="main">公司导航栏</a></dd>
+                </dl>
+                <dl>
+                    <dt>权限管理</dt>
+                    <dd><a href="###" target="main">权限列表</a></dd>
+                    <dd><a href="###" target="main">添加权限</a></dd>
+                </dl>
+                <dl>
+                    <dt>用户管理</dt>
+                    <dd><a href="###" target="main">管理员列表</a></dd>
+                    <dd><a href="###" target="main">添加管理员</a></dd>
+                </dl> -->
+            </div>
+            <div class="content">
+                <iframe name="main" frameborder="0" scrolling="auto" src="###">
+                </iframe>
+            </div>
+        </div>
+    </body>
+</html>
