@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;}
+a{
+	text-decoration:none;
+	display:inline-block;}
+img{
+	vertical-align:top;}
+ul,ol{
+	list-style:none;}
+input,textarea,buttom{
+	outline:none;}
+
+.wrap{
+	width:1200px;
+	margin:0 auto;
+	overflow:hidden;}
+		/*header*/
+.header .logo{
+			float:left;
+			margin-top:14px;
+			margin-bottom:5px;}
+.header .nav{
+	float:right;
+	margin-top:34px;
+	margin-right:14px;}
+.header .nav li{
+	float:left;
+	margin-right:56px;}
+.header .nav li:last-child{
+	margin-right:0px;}
+.header .nav li a{
+	width:100px;
+	text-align:center;
+	color:#333333;
+	display:block;
+	font-family:"微软雅黑";
+	font-size:18px;
+	line-height:18px;}
+.header .nav li a:hover{
+	border-bottom:4px solid #9a2425;
+	padding-bottom:26px;
+	color:#9a2425;}
+.header .nav li a.current{
+	border-bottom:4px solid #9a2425;
+	padding-bottom:26px;
+	color:#9a2425;}
+	/*header结束*/
+	
+	/*slider部分*/
+.slider{
+	position:relative;
+	height:600px;
+	overflow:hidden;}
+
+.banner>ul li{    /* > 只影响子集  不影响后代集*/
+	position:absolute;top:0; left:50%;
+	margin-left:-960px;}
+
+.banner .point{
+	width:160px;
+	position:absolute; bottom:0; left:50%;
+	margin-left:-80px;
+	margin-bottom:60px;}
+.banner .point li{
+	float:left;
+	margin-right:28px;}
+.banner .point li:last-child{
+	margin-right:0px;}
+	
+.banner .point li a{
+	width:34px;
+	height:34px;
+	background:#561f1a;
+	border-radius:50%;}
+.banner .point li:hover a{
+	background:#9a2f25;}
+.banner .point li.current a{
+	background:#9a2f25;}
+
+	/*contact部分*/
+
+
+.content .title{
+	background:url(../img/bg_title_2.png) no-repeat center center;
+	width:410px;
+	height:56px;
+	margin:74px auto 0 auto;
+	overflow:hidden;}
+
+.content .title h2{
+	        font-size:24px;
+			font-family:"微软雅黑";
+			color:#0a0a0a;
+			text-align:center;
+			font-weight:normal;
+			margin-top:6px;}
+.content .title h3{
+	font-size:12px;
+	font-family:"微软雅黑";
+	color:#0a0a0a;
+	text-align:center;
+	font-weight:normal;}
+
+.content .about .left{
+	float:left;
+	margin-top:64px;
+	margin-bottom:82px;}
+.content .about .right{
+	width:690px;
+	line-height:36px;
+	float:left;
+	font-family:"微软雅黑";
+	font-size:18px;
+	color:#131212;
+	text-indent:2em;
+	margin-top:140px;
+	margin-left:64px;
+	}
+.product{
+	height:661px;
+	background:url(../img/bg_middle.jpg) no-repeat center center;
+	background-position:center;
+	
+	}
+
+.product .details{
+	overflow:hidden;
+	position:relative;
+	height:336px;
+	margin-top:122px;
+	
+	}
+.product .details .list{
+	width:978px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.product .details ul{
+	height:340px;
+	
+	width:978px;
+	margin:0 auto;}
+
+.product .details ul li{
+	width:274px;
+	float:left;
+	margin:0 26px;
+	}
+.product .details ul li img{
+	border:1px solid #bfbfbf;}
+.product .details ul li p{
+	color:#0f0e0e;
+	font-size:24px;
+	display:block;
+	text-align:center;
+	margin-top:30px;
+	border:none;
+	}
+.product .details ul li:hover img{
+	border:1px solid #9a2f25;
+	color:#9a2f25;}
+.product .details ul li:hover p{
+	border:none;
+	color:#9a2f25;}
+
+.product .wrap{
+	height:661px;
+	}
+
+.product .prev a{
+	width:48px;
+	height:106px;
+	background:url(../img/prev.png) no-repeat center center;
+	position:absolute; left:3%; top:28%;}
+.product .next a{
+	width:48px;
+	height:106px;
+	background:url(../img/next.png) no-repeat center center;
+	position:absolute; right:3%; top:28%;}
+	
+.news{
+	overflow:hidden;}
+.news .left{
+	float:left;
+	margin-left:32px;
+	}
+.news .bottom{
+	margin-top:98px;
+	overflow:hidden;
+	margin-bottom:30px;}
+.news .right{
+	float:left;
+	width:606px;
+	margin-left:62px;
+	}
+.news .right span{
+	float:right;}
+.news .right li{
+	margin-bottom:38px;
+	width:604px;}
+.news .right li a{
+	color:#131212;
+	font-size:16px;
+	display:block;
+	}
+.news .right li a:last-child{
+	}
+.news .right li:hover a{   /*li:hover a  触发li里面所有的a*/
+	color:#9a2f25;}
+
+
+	/*footer*/
+.footer{
+	background:#655a59 no-repeat center center;
+	overflow:hidden;}
+.footer .left{
+	margin-top:36px;
+	float:left;
+	overflow:hidden;}
+.footer .left p{
+	color:#fcfefe;
+	font-size:16px;
+	margin-bottom:20px;
+	}
+.footer .right{
+	width:450px;
+	float:right;
+	overflow:hidden;}
+.footer .right .wechat{
+	margin-top:34px;
+	float:left;
+	width:161px;}
+.footer .right .wechat p{
+	margin-top:22px;
+	text-align:center;}
+.footer .right .contact{
+	margin-top:90px;
+	margin-left:22px;
+	float:right;}
+.footer .right p{
+	margin-bottom:18px;
+	color:#fcfefe;
+	font-size:16px;}
+.footer>p{
+	font-size:16px;
+	color:#fcfefe;
+	text-align:center;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

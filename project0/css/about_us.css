@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content .location{
+	color:#333333;
+	font-size:12px;
+	width:1200px;
+	border-bottom:1px solid #8e8e8e;
+	margin-top:88px;}
+
+.content .location a{
+	color:#333333;}
+.content .location a:hover{
+	color:#9a2625;}
+
+.content .location span{
+	color:#9a2f25;}
+.content .main{
+	overflow:hidden;
+	margin-top:28px;
+	margin-bottom:54px;}
+.content .main .sidebar{
+	float:left;}
+.content .main .sidebar .title h3{
+	font-size:18px;
+	color:#fdf8f8;
+	display:inline;
+	margin-left:18px;}
+.content .main .title span{
+	font-size:14px;
+	color:#fdf8f8;
+	line-height:50px;
+	margin-left:40px;}
+
+.content .main ul li{
+	width:200px;
+	height:50px;
+	background:url(../img/about_bg1.png);}
+	
+.content .main ul li span{
+	display:inline-block;
+	width:56px;
+	font-size:14px;
+	color:#000000;
+	margin-right:28px;
+	margin-left:34px;}
+.content .main ul li a:hover{
+	color:#9a2f25;}
+.content .main ul li a:hover span{
+	color:#9a2f25;}
+.content .main ul li a span.current{
+	color:#9a2f25;}
+.content .main ul li a.current{
+	color:#9a2f25;}
+
+	
+.content .main .title{
+	background:url(../img/about_bg2.png);
+	width:200px;
+	height:50px;}
+.content .main ul li a{
+	color:#000000;
+	line-height:50px;
+	
+	font-size:14px;
+	width:200px;
+	height:50px;
+	text-align:center;}
+.content .main .down{
+	overflow:hidden;
+	width:938px;}
+.content .main .right{
+	float:left;
+	overflow:hidden;
+	margin-left:60px;}
+.content .main .right>p{
+	width:896px;
+	font-size:16px;
+	text-indent:2em;
+	line-height:28px;
+	margin-left:42px;}
+.content .main .right .up{
+	width:938px;
+	height:50px;
+	background:url(../img/about_bg3.png);}
+.content .main .right .up h3{
+	color:#fdf8f8;
+	font-size:18px;
+	line-height:50px;
+	border-right:1px solid #fdf8f8;
+	padding-right:34px;
+	margin-left:30px;
+	display:inline;}
+.content .right span{
+	color:#fdf8f8;
+	font-size:18px;
+	line-height:50px;
+	margin-left:28px;}
+
+
+.content .right .down img{
+	float:left;
+	margin-top:33px;
+	margin-left:37px;}
+.content .right .down p{
+	width:528px;
+	float:right;
+	font-size:16px;
+	color:#000000;
+	line-height:32px;
+	margin-top:25px;
+	text-indent:2em;}
+.content .right .down p:last-child{
+	width:938px;}
+
+
+
+
+
+
+
+
+
+
+
+
+

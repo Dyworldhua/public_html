@@ -1,0 +1,238 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content .location{
+	color:#333333;
+	font-size:12px;
+	width:1200px;
+	border-bottom:1px solid #8e8e8e;
+	margin-top:88px;}
+
+.content .location a{
+	color:#333333;}
+.content .location a:hover{
+	color:#9a2625;}
+
+.content .location span{
+	color:#9a2f25;}
+.content .main{
+	overflow:hidden;
+	margin-top:28px;
+	margin-bottom:54px;}
+.content .main .sidebar{
+	float:left;}
+.content .main .sidebar .title h3{
+	font-size:18px;
+	color:#fdf8f8;
+	display:inline;
+	margin-left:18px;}
+.content .main .title span{
+	font-size:14px;
+	color:#fdf8f8;
+	line-height:50px;
+	margin-left:40px;}
+
+.content .main .sidebar ul li{
+	width:200px;
+	height:50px;
+	background:url(../img/about_bg1.png);}
+.content .main .sidebar ul li a:hover{
+	color:#9a2f25;}
+.content .main .sidebar ul li a.current{
+	color:#9a2f25;}
+.content .main ul li a:hover span{
+	color:#9a2f25;}
+.content .main ul li a span.current{
+	color:#9a2f25;}
+.content .main .title{
+	background:url(../img/about_bg2.png);
+	width:200px;
+	height:50px;}
+
+.content .main .sidebar ul li span{
+	display:inline-block;
+	width:56px;
+	font-size:14px;
+	color:#000000;
+	margin-right:28px;
+	margin-left:34px;
+	text-align:right;}
+.content .main .sidebar ul li a{
+	color:#000000;
+	line-height:50px;
+	
+	font-size:14px;
+	width:200px;
+	height:50px;
+	text-align:center;}
+.content .main .down{
+	overflow:hidden;}
+.content .main .right{
+	float:left;
+	overflow:hidden;
+	margin-left:60px;
+	}
+
+.content .main .right .up{
+	width:938px;
+	height:50px;
+	background:url(../img/about_bg3.png);}
+.content .main .right .up h3{
+	color:#fdf8f8;
+	font-size:18px;
+	line-height:50px;
+	border-right:1px solid #fdf8f8;
+	padding-right:34px;
+	margin-left:30px;
+	display:inline;}
+.content .right .up span{
+	color:#fdf8f8;
+	font-size:18px;
+	line-height:50px;
+	margin-left:28px;}
+.contetn .right .down ul{
+	overflow:hidden;}
+.content .right>ul{
+	margin-left:370px;
+	margin-top:26px;}
+.content .right>ul li{
+	width:38px;
+	height:34px;
+	border:2px solid #a7a7a7;
+	float:left;
+	margin-right:6px;}
+.content .right>ul li:first-child{
+	width:80px;
+	height:36px;
+	border:2px solid #a7a7a7;}
+.content .right>ul li:last-child{
+	width:80px;
+	height:36px;
+	border:2px solid #a7a7a7;}
+.content .right>ul li:nth-child(6){
+	width:80px;
+	height:36px;
+	border:2px solid #a7a7a7;
+	}
+.content .right>ul li:nth-child(7){
+	width:80px;
+	height:36px;
+	border:2px solid #a7a7a7;}
+.content .right>ul li a{
+	display:block;
+	color:#666666;
+	font-size:13px;
+	line-height:38px;
+	text-align:center;
+	}
+.content .right>ul li:hover{
+	border:2px solid #9a2f25;
+	color:#9a2f25;
+	}
+.content .right>ul li:hover a{
+	border:none;
+	color:#9a2f25;}
+.content .right>ul li.current{
+	border:2px solid #9a2f25;}
+	
+.content .right>ul li.current a{
+	color:#9a2f25;}
+	
+.content .right .down li{
+			width:886px;
+			overflow:hidden;
+			border-bottom:1px dashed #bebebe;
+			margin-top:36px;
+			margin-left:18px;}
+.content .right .down li:hover h2,.content .right .down li:hover a,.content .right .down li:hover p,.content .right .down li:hover span
+{
+	color:#9a2f25;} /* li里面包含的所有子元素标签写法*/
+
+.content .right .down li h2{
+	float:left;
+	font-size:16px;
+	color:#333333;
+	
+	}
+.content .right .down li h2 span{
+	margin-right:30px;}
+.content .right .down li>span{
+	float:right;
+	color:#333333;
+	margin-right:94px;}
+.content .right .down li>p{
+	float:left;
+	font-size:14px;
+	color:#333333;
+	text-indent:2em;
+	margin-top:32px;
+	margin-bottom:14px;
+	line-height:2em;
+	}
+.content .right .down li p a{
+	float:right;
+	color:#9a2f25;
+	text-indent:0;}
+.content .page{
+	float:right;
+	margin-top:36px;}
+.content .page a{
+	display:inline-block;
+	width:40px;
+	height:38px;
+	border:2px solid #999999;
+	font-size:14px;
+	line-height:38px;
+	text-align:center;
+	color:#666666;}
+.content .page a:hover{
+	border:2px solid #9a2f25;
+	color:#9a2f25;}
+.content .page a.current{
+	border:2px solid #9a2f25;
+	color:#9a2f25;}
+.content .page p{
+	display:inline-block;
+	width:83px;
+	height:38px;
+	line-height:38px;
+	border:2px solid #999999;
+	color:#666666;
+	text-align:center;
+	font-size:14px;}
+.content .page form{
+	width:178px;
+	display:inline;}
+.content .page input[type=text]{
+	border:none;
+	width:20px;
+	text-align:center;}
+.content .page input[type=button]{
+	width:83px;
+	height:42px;
+	border:2px solid #999999;
+	background:none;
+	color:#666;
+	text-align:center;
+	font-size:14px;
+	line-height:38px;
+	cursor:pointer;}
+.content .page .prev{
+	width:83px;}
+.content .page .next{
+	width:83px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

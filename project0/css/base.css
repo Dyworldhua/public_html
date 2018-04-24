@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family:"微软雅黑";}
+a{
+	text-decoration:none;
+	display:inline-block;}
+img{
+	vertical-align:top;}
+ul,ol{
+	list-style:none;}
+input,textarea,buttom{
+	outline:none;}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;}
+
+.wrap{
+	width:1200px;
+	margin:0 auto;
+	overflow:hidden;}
+		/*header*/
+.header .logo{
+			float:left;
+			margin-top:14px;
+			margin-bottom:5px;}
+.header .nav{
+	float:right;
+	margin-top:34px;
+	margin-right:14px;}
+.header .nav li{
+	float:left;
+	margin-right:56px;}
+.header .nav li:last-child{
+	margin-right:0px;}
+.header .nav li a{
+	width:100px;
+	text-align:center;
+	color:#333333;
+	display:block;
+	font-family:"微软雅黑";
+	font-size:18px;
+	line-height:18px;}
+.header .nav li a:hover{
+	border-bottom:4px solid #9a2425;
+	padding-bottom:26px;
+	color:#9a2425;}
+.header .nav li a.current{
+	border-bottom:4px solid #9a2425;
+	padding-bottom:26px;
+	color:#9a2425;}
+	/*header结束*/
+	
+	/*slider部分*/
+.slider{
+	position:relative;
+	height:600px;
+	overflow:hidden;}
+
+.banner>ul li{    /* > 只影响子集  不影响后代集*/
+	position:absolute;top:0; left:50%;
+	margin-left:-960px;}
+
+.banner .point{
+	width:160px;
+	position:absolute; bottom:0; left:50%;
+	margin-left:-80px;
+	margin-bottom:60px;}
+.banner .point li{
+	float:left;
+	margin-right:28px;}
+.banner .point li:last-child{
+	margin-right:0px;}
+	
+.banner .point li a{
+	width:34px;
+	height:34px;
+	background:#561f1a;
+	border-radius:50%;}
+.banner .point li:hover a{
+	background:#9a2f25;}
+.banner .point li.current a{
+	background:#9a2f25;}
+	/*footer*/
+.footer{
+	background:#655a59 no-repeat center center;
+	overflow:hidden;}
+.footer .left{
+	margin-top:36px;
+	float:left;
+	overflow:hidden;}
+.footer .left p{
+	color:#fcfefe;
+	font-size:16px;
+	margin-bottom:20px;
+	}
+.footer .right{
+	width:450px;
+	float:right;
+	overflow:hidden;}
+
+.footer .right .wechat{
+	margin-top:34px;
+	float:left;}
+.footer .right .wechat img{
+	border:1px solid black;}
+.footer .right .wechat p{
+	margin-top:22px;
+	text-align:center;}
+.footer .right .contact{
+	margin-top:90px;
+	margin-left:22px;
+	float:right;}
+.footer .right p{
+	margin-bottom:18px;
+	color:#fcfefe;
+	font-size:16px;}
+.footer>p{
+	font-size:16px;
+	color:#fcfefe;
+	text-align:center;
+	margin-bottom:28px;
+	}
