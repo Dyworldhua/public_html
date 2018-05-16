@@ -37,7 +37,7 @@
 
 							<dd>
                                 {volist name='type' id='val'}
-								<a href="shop_list.html">{$val.type}</a>
+								<a href="{:url('pro_list')}?type_id={$val.id}&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&season_id={$season_id}&thick_id={$thick_id}">{$val.type}</a>
                                 {/volist}
 								<!-- <a href="shop_list.html"> 爬爬服</a>
 
@@ -89,11 +89,11 @@
 
 							<dd>
 
-								<a href="shop_list.html">男 </a>
+								<a href="{:url('pro_list')}?sex_id=1&type_id={$type_id}&age_id={$age_id}&hot_id={$hot_id}&season_id={$season_id}&thick_id={$thick_id}={$type_id}">男</a>
 
-								<a href="shop_list.html">女 </a>
+								<a href="{:url('pro_list')}?sex_id=2&type_id={$type_id}&age_id={$age_id}&hot_id={$hot_id}&season_id={$season_id}&thick_id={$thick_id}">女</a>
 
-								<a href="shop_list.html">中性</a>
+								<a href="{:url('pro_list')}?sex_id=3&type_id={$type_id}&age_id={$age_id}&hot_id={$hot_id}&season_id={$season_id}&thick_id={$thick_id}={$type_id}">中性</a>
 
 								<!-- <a href="shop_list.html">通用</a>	 -->
 
@@ -114,10 +114,10 @@
 							<dt>适用年龄：</dt>
 
 							<dd>
-
-								<a><label><i><input type="checkbox" /></i>连身衣</label></a>
-
-								<a><label><i><input type="checkbox" /></i>爬爬服</label></a>
+								{volist name='age' id='data'}
+								<a href="{:url('pro_list')}?age_id={$data.id}&sex_id={$sex_id}&type_id={$type_id}&hot_id={$hot_id}&season_id={$season_id}&thick_id={$thick_id}">{$data.age}</a>
+								{/volist}
+								<!-- <a><label><i><input type="checkbox" /></i>爬爬服</label></a>
 
 								<a><label><i><input type="checkbox" /></i>连衣裙</label></a>
 
@@ -127,7 +127,7 @@
 
 								<a><label><i><input type="checkbox" /></i>上衣</label></a>
 
-								<a><label><i><input type="checkbox" /></i>外套</label></a>	
+								<a><label><i><input type="checkbox" /></i>外套</label></a>	 -->
 
 							</dd>
 
@@ -137,7 +137,7 @@
 
 						</dl>
 
-						<a class="multiple">+多选</a>
+						<!-- <a class="multiple">+多选</a> -->
 
 					</li>
 
@@ -151,25 +151,25 @@
 
 								
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>纯棉加厚</label></a>
+								<a href="{:url('pro_list')}?hot_id=1&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">纯棉加厚</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>卡通</label> </a>
+								<a href="{:url('pro_list')}?hot_id=2&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">卡通</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>背带</label></a>
+								<a href="{:url('pro_list')}?hot_id=3&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">背带</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>条纹</label></a>
+								<a href="{:url('pro_list')}?hot_id=4&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">条纹</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>假两件</label></a>
+								<a href="{:url('pro_list')}?hot_id=5&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">假两件</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>糖果色</label> </a>
+								<a href="{:url('pro_list')}?hot_id=6&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">糖果色</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>心形</label> </a>
+								<a href="{:url('pro_list')}?hot_id=7&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">心形</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>套头衫 </label></a>
+								<a href="{:url('pro_list')}?hot_id=8&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">套头衫</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>动物</label> </a>
+								<a href="{:url('pro_list')}?hot_id=9&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">动物</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>纹理</label></a>	
+								<a href="{:url('pro_list')}?hot_id=10&sex_id={$sex_id}&age_id={$age_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">纹理</a>	
 
 							</dd>
 
@@ -179,7 +179,7 @@
 
 						</dl>
 
-						<a class="multiple">+多选</a>
+						<!-- <a class="multiple">+多选</a> -->
 
 					</li>
 
@@ -191,13 +191,13 @@
 
 							<dd>
 
-								<a href="shop_list.html">春 </a>
+								<a href="{:url('pro_list')}?season_id=1&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&thick_id={$thick_id}">春 </a>
 
-								<a href="shop_list.html">夏</a>
+								<a href="{:url('pro_list')}?season_id=2&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&thick_id={$thick_id}">夏</a>
 
-								<a href="shop_list.html">秋</a>
+								<a href="{:url('pro_list')}?season_id=3&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&thick_id={$thick_id}">秋</a>
 
-								<a href="shop_list.html">冬</a>
+								<a href="{:url('pro_list')}?season_id=4&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&thick_id={$thick_id}">冬</a>
 
 							</dd>
 
@@ -217,13 +217,13 @@
 
 							<dd>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>常规</label>  </a>
+								<a href="{:url('pro_list')}?thick_id=1&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}">常规</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>加厚</label> </a>
+								<a href="{:url('pro_list')}?thick_id=2&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}">加厚</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>薄款</label></a>
+								<a href="{:url('pro_list')}?thick_id=3&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}">薄款</a>
 
-								<a href="shop_list.html"><label><i><input type="checkbox" /></i>加绒</label>  </a>
+								<a href="{:url('pro_list')}?thick_id=4&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}">加绒</a>
 
 							</dd>
 
@@ -233,14 +233,14 @@
 
 						</dl>
 
-						<a class="multiple">+多选</a>
+						<!-- <a class="multiple">+多选</a> -->
 
 					</li>
 
 				</ul>
 			</div>
 
-					<script>
+					<!-- <script>
 
 					
 
@@ -332,20 +332,22 @@
 
 						})
 
-					</script>
+					</script> -->
 
 			<div class="middle">
 				<div class="mid-top">
 					<div class="filtrate">
-						<button><i class="on">综合</i></button>
+						<ul>
+						<li class="current"><a href="{:url('pro_list')}?sub=1">综合</a></li>
 
-						<button><i>热销</i></button>
+						<li><a href="{:url('pro_list')}?sub=2">热销</a></li>
 
-						<button><i>销量</i></button>
+						<!-- <li><a href="###">销量</a></i></li> -->
 
-						<button><i>新品</i></button>
+						<li><a href="{:url('pro_list')}?sub=3">新品</a></li>
 
-						<button><i>价格</i></button>
+						<li><a href="{:url('pro_list')}?sub=4">价格</a></li>
+						</ul>
 					</div>
 
 					<div class="price">
@@ -356,37 +358,31 @@
 						<input type="text" placeholder="￥请输入" />
 					</div>
 
-					<div class="skip">
+					<!-- <div class="skip">
 						<a>1/50</a>
 
 						<button><</button>
 
 						<button>></button>
-					</div>
+					</div> -->
 				</div>
 
 				<!--mid-top-->
 
 				<div class="mid-contre">
 					<ul>
-
+						{volist name='product' id='val'}
 						<li>
-
-							<a href="pro_details.html"><img src="images/shop_list_01.jpg"></a>
-
+							<a href="{:url('Prodetails/prodetails')}?id={$val.id}"><img src="__UPLOAD__{$val.picture}" class="picture"></a>
 							<div class="pro-bot">
-								<a class="price">RMB:336.0</a>
-
-								<button>加入购物车<img src="images/cart.png"></button>
-
-								<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-								<span><i>月成交：1100笔</i><i>评价：1190条</i></span>
+								<a class="price">RMB:{$val.price}.0</a>
+								<a onclick="add_car({$val['id']})"><button>加入购物车<img src="__STATIC__/__IMAGE1__/cart.png"></button></a>
+								<p>{$val.title}</p>
+								<span><i>月成交：{$val.sale}笔</i><i>评价：{$val.score}条</i></span>
 							</div>
-
 						</li>
-
-						<li>
+						{/volist}
+						<!-- <li>
 
 							<a href="pro_details.html"><img src="images/shop_list_02.jpg"></a>
 
@@ -726,20 +722,21 @@
 
 							</div>
 
-						</li>
+						</li> -->
 
 					</ul>
 				</div>
 				<!--mid-contre-->
-
+				{if condition="!empty($product)"}
 				<div class="mid-bot">
+				<form action="{:url('pro_list')}" method="POST">
+					<input type="hidden" id="user_id" value="{$Request.session.id}"/>
 					<ul>
-
-						<li><a class="#">首页</a></li>
-
-						<li><a class="#">1</a></li>
-
-						<li><a class="#">2</a></li>
+						<li><a href="{:url('pro_list')}?page=1&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">首页</a></li>
+						{for start="1" end="$page_max+1"}
+						<li><a href="{:url('pro_list')}?page={$i}&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">{$i}</a></li>
+						{/for}
+						<!-- <li><a class="#">2</a></li>
 
 						<li><a class="#">3</a></li>
 
@@ -751,21 +748,22 @@
 
 						<li><a class="#">7</a></li>
 
-						<li><a class="#">8</a></li>
+						<li><a class="#">8</a></li> -->
 
-						<li><a class="#">下一页</a></li>
+						<li><a href="{:url('pro_list')}?page={if condition="$current_page+1<=$page_max"}{$current_page+1}{else/}{$page_max}{/if}&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">下一页</a></li>
 
-						<li><a class="#">末页</a></li>
+						<li><a href="{:url('pro_list')}?page={$page_max}&sex_id={$sex_id}&age_id={$age_id}&hot_id={$hot_id}&type_id={$type_id}&season_id={$season_id}&thick_id={$thick_id}">末页</a></li>
 
-						<li><span>共48页</span></li>
+						<li><span>共{$page_max}页</span></li>
 
-						<li><label>第<input type="text" value=""/>页</label></li>
+						<li><label>第<input type="text" name="page_num"/>页</label></li>
 
-						<li><a>确定</a></li>
+						<li><input type="submit" value="确定"/></li>
 
 					</ul>
+				</form>
 				</div>
-
+				{/if}
 			</div>
 
 			<!--middle-->
@@ -867,6 +865,36 @@
 		</div>
 
 	</body>
+	<script>
+		function add_car(pid){
+			var id = pid;
+			var user_id = $("#user_id").val();
+			var data = {
+				'pid':id,
+				'user_id':user_id,
+				'cid':1,
+				'hid':1,
+				'mid':1,
+				'num':1
+			};
+			$.ajax({
+				url:"{:url('shopcar/shopcar')}",
+				data:data,
+				type:'post',
+				dataType:'json',
+				success:function(info){
+					if(info.code==2){
+						alert('加入成功');
+					}else if(info.code==3){
+						alert('请先登录');window.location.href=info.url
+					}
+				},
+				error:function(info){
+					alert('加入失败');
+				}
+			})
+		}
+	</script>
 
 </html>
 

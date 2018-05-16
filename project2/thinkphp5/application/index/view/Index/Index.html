@@ -48,13 +48,13 @@
 
 		<div class="conter">
 
-			<a class="back-top-left"><img src="images/index-top-left.png"></a>
+			<a class="back-top-left"><img src="__STATIC__/__IMAGE1__/index-top-left.png"></a>
 
-			<a class="back-top-right"><img src="images/index-top-right.png"></a>
+			<a class="back-top-right"><img src="__STATIC__/__IMAGE1__/index-top-right.png"></a>
 
 			<div class="service">
 
-				<img src="images/service.png"/>
+				<img src="__STATIC__/__IMAGE1__/service.png"/>
 				<div class="service-left">
 					<p>客服小熊</p>
 
@@ -75,13 +75,13 @@
 				<div class="top">
 
 					<div class="top-left">
-						<a class="pug"><img src="images/pug.png"></a>
+						<a class="pug"><img src="__STATIC__/__IMAGE1__/pug.png"></a>
 
-						<span>新品上市</span>
+						<span>{$subtype1.type}</span>
 
-						<a class="pollex"><img src="images/pollex.png"></a>
+						<a class="pollex"><img src="__STATIC__/__IMAGE1__/pollex.png"></a>
 					</div>
-					<div class="top-right">
+					<!-- <div class="top-right">
 						<ul>
 
 							<li><a href="#">连衣裙</a></li>
@@ -93,7 +93,7 @@
 							<li class="on"><a href="#">连体衣</a></li>
 
 						</ul>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="middle">
@@ -101,318 +101,58 @@
 					
 					<div class="mid-left">
 
-						<a href="pro_details.html"><img src="images/index_new-01.jpg" /></a>
+						<a href="{:url('prodetails/prodetails')}?id={$adver_product1.id}"><img src="__UPLOAD__/{$adver_product1.picture}" width="481px" height="578px"/></a>
 
-						<a class="newpro-big"><img src="images/newpro-big.png"></a>
+						<a class="newpro-big"><img src="__STATIC__/__IMAGE1__/newpro-big.png"></a>
 
 						<div class="mid-left-bot">
 							<span>
 
-								<a href="pro_details.html">
+								<a href="{:url('prodetails/prodetails')}?id={$adver_product1.id}">
 
-									<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
+									<p>{$adver_product1.title}</p>
 
-									<i>RMB:398.0</i>
+									<i>RMB:{$adver_product1.price}.0</i>
 
 								</a>	
 
 							</span>	
 
-							<a href="pro_details.html"><button class="btn">立即购买</button></a>
+							<a href="{:url('prodetails/prodetails')}?id={$adver_product1.id}"><button class="btn">立即购买</button></a>
 						</div>
 
 					</div>
 
 					<div class="mid-right">
 						<ul>
-
+							{volist name='new_product' id='val1'}
 							<li>
 
-								<a href="pro_details.html" class="newimg"><img src="images/new-right01.jpg" /></a>
+								<a href="{:url('Prodetails/prodetails')}?id={$val1.id}" class="newimg"><img src="__UPLOAD__{$val1.picture}" /></a>
 
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
+								<a class="newpro-min"><img src="__STATIC__/__IMAGE1__/newpro-min.png"></a>
 
 								<div class="mid-right-bot">
 
 									<span>
 
-										<a href="pro_details.html">
+										<a href="{:url('Prodetails/prodetails')}?id={$val1.id}">
 
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
+											<p>{$val1.title}</p>
 
-											<i>RMB:398.0</i>
+											<i>RMB:{$val1.price}.0</i>
 
 										</a>	
 
 									</span>	
 
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
+									<a href="{:url('Prodetails/prodetails')}?id={$val1.id}"><button class="btn">立即购买</button></a>
 
 								</div>
 
 							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/new-right02.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>	
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/new-right03.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/new-right04.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>	
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/new-right05.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/new-right06.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
+							{/volist}
 						
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/newbot01.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/newbot02.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/newbot03.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/newbot04.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html" class="newimg"><img src="images/newbot05.jpg" /></a>
-
-								<a class="newpro-min"><img src="images/newpro-min.png"></a>
-
-								<div class="mid-right-bot">
-
-									<span>
-
-										<a href="pro_details.html">
-
-											<p>女婴2016秋冬纯棉长袖爬服夹棉连身衣</p>
-
-											<i>RMB:398.0</i>
-
-										</a>	
-
-									</span>		
-
-									<a href="pro_details.html"><button class="btn">立即购买</button></a>
-
-								</div>
-
-							</li>
 
 						</ul>
 					</div>
@@ -426,27 +166,13 @@
 
 					<div class="top-left">
 
-						<a class="pug"><img src="images/pug.png"></a>
+						<a class="pug"><img src="__STATIC__/__IMAGE1__/pug.png"></a>
 
-						<span>热门推荐</span>
-
-					</div>
-
-					<div class="top-right">
-
-						<ul>
-
-							<li><a href="#">连衣裙</a></li>
-
-							<li><a href="#">上衣</a></li>
-
-							<li><a href="#">裤子</a></li>
-
-							<li class="on"><a href="#">连体衣</a></li>
-
-						</ul>
+						<span>{$subtype2.type}</span>
 
 					</div>
+
+
 
 				</div>
 
@@ -460,16 +186,9 @@
 
 					<div class="switchover">
 						<ul>
-
-							<li><a href="pro_details.html"><img src="images/hot01.jpg"></a></li>
-
-							<li><a href="pro_details.html"><img src="images/hot02.jpg"></a></li>
-
-							<li><a href="pro_details.html"><img src="images/hot03.jpg"></a></li>
-
-							<li><a href="pro_details.html"><img src="images/hot04.jpg"></a></li>
-
-							<li><a href="pro_details.html"><img src="images/hot02.jpg"></a></li>
+							{volist name='hot_product' id='val2'}
+							<li><a href="{:url('Prodetails/prodetails')}?id={$val2.id}"><img src="__UPLOAD__{$val2.picture}"></a></li>
+							{/volist}
 
 						</ul>	
 					</div>
@@ -477,17 +196,17 @@
 				</div>
 
 				<div class="hot-right">
-					<a href="pro_details.html" class="hot-img"><img src="images/hot-big.jpg"></a>
+					<a href="{:url('prodetails/prodetails')}?id={$adver_product2.id}" class="hot-img"><img src="__UPLOAD__/{$adver_product2.picture}" width="825px" height="932px"></a>
 
 					<div class="cover">
 
-						<a href="pro_details.html" class="hot-buy"><img src="images/hot-buy.png"></a>
+						<a href="{:url('prodetails/prodetails')}?id={$adver_product2.id}" class="hot-buy"><img src="__STATIC__/__IMAGE1__/hot-buy.png"></a>
 
-						<a href="pro_details.html" class="surface"><img src="images/hot-right-surface.png"></a>
+						<a href="{:url('prodetails/prodetails')}?id={$adver_product2.id}" class="surface"><img src="__STATIC__/__IMAGE1__/hot-right-surface.png"></a>
 
-						<p>男女婴2016秋冬纯棉FF熊夹棉长袖卫衣</p>
+						<p>{$adver_product2.title}</p>
 
-						<a href="pro_details.html"><button>点击购买</button></a>
+						<a href="{:url('prodetails/prodetails')}?id={$adver_product2.id}"><button>点击购买</button></a>
 
 					</div>
 				</div>
@@ -497,38 +216,23 @@
 
 			<div class="back-conter">
 
-				<img src="images/index-middle.png" />	
+				<img src="__STATIC__/__IMAGE1__/index-middle.png" />	
 
 			</div>
 
 			<div class="explode">
 
-				<a class="joy"><img src="images/joy.png"></a>
+				<a class="joy"><img src="__STATIC__/__IMAGE1__/joy.png"></a>
 				<div class="top">
 
 					<div class="top-left">
 
-						<a class="pug"><img src="images/pug.png"></a>
+						<a class="pug"><img src="__STATIC__/__IMAGE1__/pug.png"></a>
 
-						<span>爆款产品</span>
-
-					</div>
-
-					<div class="top-right">
-
-						<ul>
-
-							<li><a href="#">连衣裙</a></li>
-
-							<li><a href="#">上衣</a></li>
-
-							<li><a href="#">裤子</a></li>
-
-							<li class="on"><a href="#">连体衣</a></li>
-
-						</ul>
+						<span>{$subtype3.type}</span>
 
 					</div>
+
 
 				</div>
 
@@ -536,9 +240,9 @@
 
 				<div class="middle">
 					<div class="mid-left">
-						<a href="pro_details.html"><img src="images/explode-left.jpg"></a>
+						<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-left.jpg"></a>
 
-						<a class="thweek"><img src="images/thweek.png"></a>
+						<a class="thweek"><img src="__STATIC__/__IMAGE1__/thweek.png"></a>
 
 						<div class="pro-text">
 
@@ -559,10 +263,32 @@
 
 					<div class="mid-right">
 						<ul>
-
+							{volist name='sale_product' id='val3'}
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-right01.jpg"></a>
+								<a href="{:url('Prodetails/prodetails')}?id={$val3.id}"><img src="__UPLOAD__{$val3.picture}"></a>
+
+								<a href="{:url('Prodetails/prodetails')}?id={$val3.id}"><button>马上抢</button></a>
+
+								<div class="pro-text">
+
+									<a href="{:url('Prodetails/prodetails')}?id={$val3.id}">
+
+										<p>男婴儿2016小熊无袖背心爬服</p>
+
+										<i class="text-left"><a>原价：640.0</a></i>
+
+										<i class="text-center">抢购价:{$val3.price}.0</i>
+
+									</a>
+
+								</div>
+
+							</li>
+							{/volist}
+							<!-- <li>
+
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-right02.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -584,7 +310,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-right02.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-right03.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -606,7 +332,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-right03.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-right04.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -628,7 +354,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-right04.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-right05.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -650,29 +376,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-right05.jpg"></a>
-
-								<a href="pro_details.html"><button>马上抢</button></a>
-
-								<div class="pro-text">
-
-									<a href="pro_details.html">
-
-										<p>男婴儿2016小熊无袖背心爬服</p>
-
-										<i class="text-left"><a>原价：640.0</a></i>
-
-										<i class="text-center">抢购价:356.0</i>
-
-									</a>
-
-								</div>
-
-							</li>
-
-							<li>
-
-								<a href="pro_details.html"><img src="images/explode-right06.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-right06.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -696,7 +400,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-bot01.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-bot01.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -718,7 +422,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-bot02.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-bot02.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -740,7 +444,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-bot03.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-bot03.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -762,7 +466,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-bot04.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-bot04.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -784,7 +488,7 @@
 
 							<li>
 
-								<a href="pro_details.html"><img src="images/explode-bot05.jpg"></a>
+								<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/explode-bot05.jpg"></a>
 
 								<a href="pro_details.html"><button>马上抢</button></a>
 
@@ -802,7 +506,7 @@
 
 								</div>
 
-							</li>
+							</li> -->
 
 							
 
@@ -812,18 +516,18 @@
 			</div>
 			<!--<div class="back-conter">
 
-				<img src="images/index-middle.png" />	
+				<img src="__STATIC__/__IMAGE1__/index-middle.png" />	
 
 			</div>-->
 
 			<div class="ticket">
-				<a href="#" class="discount"><img src="images/discount.png"/></a>
+				<a href="#" class="discount"><img src="__STATIC__/__IMAGE1__/discount.png"/></a>
 
-				<a href="#" class="vouchers"><img src="images/vouchers.png"></a>
+				<a href="#" class="vouchers"><img src="__STATIC__/__IMAGE1__/vouchers.png"></a>
 			</div>
 
 			<div class="ballute">
-				<img src="images/ballute.png">
+				<img src="__STATIC__/__IMAGE1__/ballute.png">
 
 					
 			</div>
@@ -833,13 +537,13 @@
 
 					<div class="top-left">
 
-						<a class="pug"><img src="images/pug.png"></a>
+						<a class="pug"><img src="__STATIC__/__IMAGE1__/pug.png"></a>
 
-						<span>热门产品</span>
+						<span>{$subtype4.type}</span>
 
 					</div>
 
-					<div class="top-right">
+					<!-- <div class="top-right">
 
 						<ul>
 
@@ -853,16 +557,34 @@
 
 						</ul>
 
-					</div>
+					</div> -->
 
 				</div>
 
 				<div class="middle">
 					<ul>
-
+						{volist name='door_product' id='val4'}
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular01.jpg"></a>
+							<a href="{:url('Prodetails/prodetails')}?id={$val4.id}"><img src="__UPLOAD__{$val4.picture}"></a>
+
+							<span>
+
+								<a href="{:url('Prodetails/prodetails')}?id={$val4.id}">
+
+									<p>女婴春夏纯棉波点短袖连衣裙</p>
+
+									<button>热门价：{$val4.price}.0</button>
+
+								</a>
+
+							</span>
+
+						</li>
+						{/volist}
+						<!-- <li>
+
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular02.jpg"></a>
 
 							<span>
 
@@ -880,7 +602,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular02.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular03.jpg"></a>
 
 							<span>
 
@@ -898,7 +620,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular03.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular04.jpg"></a>
 
 							<span>
 
@@ -916,7 +638,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular04.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular05.jpg"></a>
 
 							<span>
 
@@ -934,7 +656,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular05.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular06.jpg"></a>
 
 							<span>
 
@@ -952,7 +674,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular06.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular07.jpg"></a>
 
 							<span>
 
@@ -970,7 +692,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular07.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular08.jpg"></a>
 
 							<span>
 
@@ -988,7 +710,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular08.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular09.jpg"></a>
 
 							<span>
 
@@ -1006,7 +728,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular09.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular10.jpg"></a>
 
 							<span>
 
@@ -1024,7 +746,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular10.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular11.jpg"></a>
 
 							<span>
 
@@ -1042,7 +764,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular11.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular12.jpg"></a>
 
 							<span>
 
@@ -1060,7 +782,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular12.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular13.jpg"></a>
 
 							<span>
 
@@ -1078,7 +800,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular13.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular14.jpg"></a>
 
 							<span>
 
@@ -1096,7 +818,7 @@
 
 						<li>
 
-							<a href="pro_details.html"><img src="images/popular14.jpg"></a>
+							<a href="pro_details.html"><img src="__STATIC__/__IMAGE1__/popular15.jpg"></a>
 
 							<span>
 
@@ -1110,25 +832,7 @@
 
 							</span>
 
-						</li>
-
-						<li>
-
-							<a href="pro_details.html"><img src="images/popular15.jpg"></a>
-
-							<span>
-
-								<a href="pro_details.html">
-
-									<p>女婴春夏纯棉波点短袖连衣裙</p>
-
-									<button>热门价：384.0</button>
-
-								</a>
-
-							</span>
-
-						</li>
+						</li> -->
 
 					</ul>	
 				</div>
@@ -1140,7 +844,7 @@
 
 			<div class="back-bottom">
 
-				<img src="images/index-bottom.png" />
+				<img src="__STATIC__/__IMAGE1__/index-bottom.png" />
 
 			</div>
 
@@ -1151,9 +855,9 @@
 		<div class="footer">
 			<div class="footer-top">
 
-				<a class="code-left"><img src="images/code01.jpg"><span>官方微信</span></a>
+				<a class="code-left"><img src="__STATIC__/__IMAGE1__/code01.jpg"><span>官方微信</span></a>
 
-				<a class="code-right"><img src="images/code02.jpg"><span>官方微博</span></a>
+				<a class="code-right"><img src="__STATIC__/__IMAGE1__/code02.jpg"><span>官方微博</span></a>
 				<ul>
 
 					<li>

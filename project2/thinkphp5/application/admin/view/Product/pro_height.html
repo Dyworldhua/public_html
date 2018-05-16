@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align:center;
+            font-weight:normal;
+        }
+        h3{
+            text-align:center;
+            font-weight:normal;
+        }
+        h3 a{
+            text-decoration:none;
+            color:#000;
+        }
+        h3 a:hover{
+            font-weight:bold;
+            border:1px solid #000;
+            padding:5px;
+        }
+        table{
+            margin:0 auto;
+            text-align:center;
+        }
+        td{
+            width:200px;
+        }
+        td a{
+            color:#000;
+            text-decoration: none;
+        }
+        td a:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2>产品参考身高</h2>
+    <h3><a href="{:url('pro_height_add')}">参考身高添加</a></h3>
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>身高ID</td>
+            <td>参考身高</td>
+            <td>身高操作</td>
+        </tr>
+        {volist name='height' id='val'}
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.height}</td>
+            <td><a href="{:url('pro_height_edit')}?id={$val.id}">编辑</a>|<a href="{:url('pro_height_delete')}?id={$val.id}">删除</a></td>
+        </tr>
+        {/volist}
+    </table>
+</body>
+</html>

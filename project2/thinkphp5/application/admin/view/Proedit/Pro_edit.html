@@ -35,6 +35,10 @@
             float:left;
             margin-left:50px;
         }
+        .div4{
+            float:left;
+            margin-left:20px;
+        }
         .div2 h3{
             margin-left:78px;
         }
@@ -87,6 +91,65 @@
                     {volist name='color' id='val'}
                     <input type="checkbox" value="{$val.id}" name="co[]" {if in_array($val.id,$classify)}checked="checked"{/if}/>{$val.color}
                     {/volist}
+                </p>
+                <p>参考身高：<br/>
+                    {volist name='height' id='hei'}
+                    <input type="checkbox" value="{$hei.id}" name="height[]" style="margin-left:90px;" <?php if(in_array($hei['id'],$reference)){echo "checked='checked'";}?>/>{$hei.height}<br/>
+                    {/volist}
+                </p>
+            </div>
+            <div class="div4">
+                <h3>产品类型</h3>
+                <p>产品分类：
+                    <select name="type">
+                        {volist name='type' id='val1'}
+                        <option value="{$val1.id}" <?php if($val1['id']==$pro_type['type']){echo "selected='selected'";}?>>{$val1.type}</option>
+                        {/volist}
+                    </select>
+                </p>
+                <p>产品适用性别：
+                    <select name="pro_sex">
+                        <option value="1" <?php if($pro_type['sex']==1){echo "selected='selected'";}?>>男</option>
+                        <option value="2" <?php if($pro_type['sex']==2){echo "selected='selected'";}?>>女</option>
+                        <option value="3" <?php if($pro_type['sex']==3){echo "selected='selected'";}?>>中性</option>
+                    </select>
+                </p>
+                <p>产品适用年龄：
+                    <select name="age">
+                        {volist name='age' id='val2'}
+                        <option value="{$val2.id}" <?php if($val2['id']==$pro_type['sex']){echo "selected='selected'";}?>>{$val2.age}</option>
+                        {/volist}
+                    </select>
+                </p>
+                <p>产品选购热点：
+                    <select name="hot">
+                        <option value="1" <?php if($pro_type['hot']==1){echo "selected='selected'";}?>>纯棉加厚</option>
+                        <option value="2" <?php if($pro_type['hot']==2){echo "selected='selected'";}?>>卡通</option>
+                        <option value="3" <?php if($pro_type['hot']==3){echo "selected='selected'";}?>>背带</option>
+                        <option value="4" <?php if($pro_type['hot']==4){echo "selected='selected'";}?>>条纹</option>
+                        <option value="5" <?php if($pro_type['hot']==5){echo "selected='selected'";}?>>假两件</option>
+                        <option value="6" <?php if($pro_type['hot']==6){echo "selected='selected'";}?>>糖果色</option>
+                        <option value="7" <?php if($pro_type['hot']==7){echo "selected='selected'";}?>>心形</option>
+                        <option value="8" <?php if($pro_type['hot']==8){echo "selected='selected'";}?>>套头衫</option>
+                        <option value="9" <?php if($pro_type['hot']==9){echo "selected='selected'";}?>>动物</option>
+                        <option value="10" <?php if($pro_type['hot']==10){echo "selected='selected'";}?>>纹理</option>
+                    </select>
+                </p>
+                <p>产品适用季节：
+                    <select name="season">
+                        <option value="1" <?php if($pro_type['season']==1){echo "selected='selected'";}?>>春</option>
+                        <option value="2" <?php if($pro_type['season']==2){echo "selected='selected'";}?>>夏</option>
+                        <option value="3" <?php if($pro_type['season']==3){echo "selected='selected'";}?>>秋</option>
+                        <option value="4" <?php if($pro_type['season']==4){echo "selected='selected'";}?>>冬</option>
+                    </select>
+                </p>
+                <p>产品厚薄度：
+                    <select name="thickness">
+                        <option value="1" <?php if($pro_type['thickness']==1){echo "selected='selected'";}?>>常规</option>
+                        <option value="2" <?php if($pro_type['thickness']==2){echo "selected='selected'";}?>>加厚</option>
+                        <option value="3" <?php if($pro_type['thickness']==3){echo "selected='selected'";}?>>薄款</option>
+                        <option value="4" <?php if($pro_type['thickness']==4){echo "selected='selected'";}?>>加绒</option>
+                    </select>
                 </p>
             </div>
             <div class="div2">

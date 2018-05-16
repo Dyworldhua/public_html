@@ -33,10 +33,14 @@
         }
         .div2{
             float:left;
-            margin-left:50px;
+            margin-left:120px;
         }
         .div2 h3{
             margin-left:78px;
+        }
+        .div4{
+            float:left;
+            margin-left:20px;
         }
         table{
             margin:0 auto;
@@ -72,7 +76,7 @@
                 <p>产品名称：<input type="text" name="title" required/></p>
                 <p>产品售价：<input type="text" name="price" required/></p>
                 <p>产品图片：<input type="file" name="picture"/></p>
-                <p>产品缩略图：<br/>
+                <p>产品缩略图：<input type="checkbox" value="1" name="thumb" checked/>生成缩略图
                     <!-- <input type="file" name="img1"/>
                     <input type="file" name="img2"/><br/>
                     <input type="file" name="img3"/>
@@ -83,10 +87,77 @@
                 <p>产品月销量：<input type="text" name="sale" required/></p>
                 <p>产品评价：<input type="text" name="score" required/></p>
                 <p>产品积分：<input type="text" name="integral" required/></p>
+                <p>产品首页内容类型：
+                        <select name="sub_type">
+                            {volist name='sub_type' id='val3'}
+                            <option value="{$val3.id}">{$val3.type}</option>
+                            {/volist}
+                        </select>
+                </p>
+                <p>是否作为广告产品:<input type="checkbox" value="1" name="adver"/></p>
                 <p>产品颜色：
                     {volist name='color' id='val'}
                     <input type="checkbox" value="{$val.id}" name="co[]"/>{$val.color}
                     {/volist}
+                </p>
+                <p>参考身高：<br/>
+                    {volist name='height' id='hei'}
+                    <input type="checkbox" value="{$hei.id}" name="height[]" style="margin-left:90px;"/>{$hei.height}<br/>
+                    {/volist}
+                </p>
+            </div>
+            <div class="div4">
+                <h3>产品类型</h3>
+                <p>产品分类：
+                    <select name="type">
+                        {volist name='type' id='val1'}
+                        <option value="{$val1.id}">{$val1.type}</option>
+                        {/volist}
+                    </select>
+                </p>
+                <p>产品适用性别：
+                    <select name="pro_sex">
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                        <option value="3">中性</option>
+                    </select>
+                </p>
+                <p>产品适用年龄：
+                    <select name="age">
+                        {volist name='age' id='val2'}
+                        <option value="{$val2.id}">{$val2.age}</option>
+                        {/volist}
+                    </select>
+                </p>
+                <p>产品选购热点：
+                    <select name="hot">
+                        <option value="1">纯棉加厚</option>
+                        <option value="2">卡通</option>
+                        <option value="3">背带</option>
+                        <option value="4">条纹</option>
+                        <option value="5">假两件</option>
+                        <option value="6">糖果色</option>
+                        <option value="7">心形</option>
+                        <option value="8">套头衫</option>
+                        <option value="9">动物</option>
+                        <option value="10">纹理</option>
+                    </select>
+                </p>
+                <p>产品适用季节：
+                    <select name="season">
+                        <option value="1">春</option>
+                        <option value="2">夏</option>
+                        <option value="3">秋</option>
+                        <option value="4">冬</option>
+                    </select>
+                </p>
+                <p>产品厚薄度：
+                    <select name="thickness">
+                        <option value="1">常规</option>
+                        <option value="2">加厚</option>
+                        <option value="3">薄款</option>
+                        <option value="4">加绒</option>
+                    </select>
                 </p>
             </div>
             <div class="div2">

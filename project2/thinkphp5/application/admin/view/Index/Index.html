@@ -7,35 +7,32 @@
     </head>
     <body>
         <div class="top">
-            <div class="logo">
-                <a href="index.html"><img src="../images/logo.png"/></a>
+            <div class="logo" style="margin-bottom:20px;">
+                <a href="{:url('index')}"><img src="__STATIC__/__IMAGE1__/logo.jpg"/></a>
             </div>
             <div class="backend">
                 <a href="###">登录</a>
                 <a href="###">退出</a>  
             </div>
         </div>
-        <div class="title">
-            <p>后台管理系统</p>
+        <div class="title" style="background-color: rgb(108, 199, 96);">
+            <p>贺曼商城后台管理系统</p>
         </div>
         <div class="down">
-            <div class="nav">
-                <!-- <dl>
-                    <dt>新闻管理</dt>
-                    <dd><a href="###" target="main">新闻列表</a></dd>
-                    <dd><a href="###" target="main">添加新闻</a></dd>
-					<dd><a href="###" target="main">新闻类型</a></dd>
-                </dl> -->
+            <div class="nav" style="background-color: rgb(38, 113, 28);">
                 <dl>
                     <dt>产品中心</dt>
                     <dd><a href="{:url('Product/product')}" target="main">产品列表</a></dd>
                     <dd><a href="{:url('Proadd/pro_add')}" target="main">添加产品</a></dd>
                     <dd><a href="{:url('Product/pro_type')}" target="main">产品分类</a></dd>
-                    <dd><a href="{:url('Product/protype')}" target="main">首页分类</a></dd>
+                    <dd><a href="{:url('Product/pro_height')}" target="main">参考身高</a></dd>
                 </dl>
                 <dl>
                     <dt>首页管理</dt>
                     <dd><a href="{:url('Indexmanage/Index_nav')}" target="main">导航栏管理</a></dd>
+                    <dd><a href="{:url('Indexmanage/index_type')}" target="main">首页分类</a></dd>
+                    <dd><a href="{:url('Indexmanage/index_sub_type')}" target="main">首页内容分类</a></dd>
+                    <dd><a href="###" target="main">首页广告管理</a></dd>
                 </dl>
                 <!-- <dl>
                     <dt>留言管理</dt>

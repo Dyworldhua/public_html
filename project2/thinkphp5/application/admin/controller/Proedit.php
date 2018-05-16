@@ -7,18 +7,36 @@
         public function pro_edit(){
             //将产品数据从数据库中取出
             $id = $_GET['id'];
-            //var_dump($id);
             $product = Db::table('product')->where('id',$id)->find(); // 只取一条数据的时候用find()
-            $classify = json_decode($product['color']); // 将表中颜色分类字段转化转化为数组格式
+            $classify = json_decode($product['color']);// 将表中颜色分类字段转化转化为数组格式
+            $reference = json_decode($product['height']); // 取出表中参考身高，并转化为数组格式
+            $this->assign('reference',$reference);
+            // 取出产品当前类型
+            $pro_type = Db::table('pro_add_type')->where('id',$product['type_id'])->find();
+            // 将产品详情从数据表中取出
+            $pro_del = Db::table('pro_del')->where('pro_id',$id)->find();
+            // 产品类型模板赋值
+            $this->assign('pro_type',$pro_type); 
             // 颜色分类模板赋值
             $this->assign('classify',$classify);
             // 产品数据模板赋值
             $this->assign('product',$product);
-            // 将产品详情从数据表中取出
-            $pro_del = Db::table('pro_del')->where('pro_id',$id)->find();
             // 产品详情模板赋值
             $this->assign('pro_del',$pro_del);
-
+            
+            // 取出产品类型
+            $type = Db::table('pro_type')->select();
+            $this->assign('type',$type);
+            // 取出参考身高
+            $height = Db::table('pro_height')->select();
+            foreach($height as $key => $val){
+                $offset = strpos($val['height'],'（');
+                $height[$key]['height'] = mb_substr($val['height'],0,$offset,"utf8"); // 截取参考身高，只显示身高值
+            }
+            $this->assign('height',$height);
+            // 取出适用年龄
+            $age = Db::table('pro_type_age')->select();
+            $this->assign('age',$age);
             //将颜色分类从数据库中取出
             $color = Db::table('color')->select();
             $this->assign('color',$color);
@@ -45,6 +63,7 @@
             $data['score'] = input('score');//产品评价
             $data['integral'] = input('integral');//产品积分
             $data['color'] = json_encode(input('co/a')); //产品颜色，存为json格式
+            $data['height'] = json_encode(input('height/a'));// 参考身高，存为json格式
             //产品参数
             $para['material'] = input('material');  //材质
             $para['sex'] = input('sex');  //性别
@@ -59,6 +78,16 @@
                 Alert('产品内容不能为空','-1');
                 exit;
             }
+             // 产品类型
+             $type['type'] = input('type'); // 产品类型
+             $type['sex'] = input('pro_sex'); // 适用性别
+             $type['age'] = input('age'); // 适用年龄
+             $type['hot'] = input('hot'); // 选购热点
+             $type['season'] = input('season'); // 适用季节
+             $type['thickness'] = input('thickness'); // 产品厚薄度
+            
+            $type_id = Db::table('product')->where('id',$update_id)->find(); // 链接当前数据，获取产品类型ID
+            $insert_type = Db::table('pro_add_type')->where('id',$type_id['type_id'])->update($type); // 产品类型更新
             // 产品基本信息更新
             $update = Db::table('product')
             ->where('id',$update_id)

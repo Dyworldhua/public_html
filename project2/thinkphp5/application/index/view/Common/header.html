@@ -17,41 +17,45 @@
 
 						<li><a href="user.html">会员中心</a></li>
 
-						<li><a href="shop_cart.html">购物车</a></li>
+						<li><a href="{:url('shopcar/shopcar')}">购物车</a></li>
 
 						<li><a href="#">我的收藏</a></li>
 
 						<li><a href="#">我的贺曼</a></li>
-
+						
+						{if condition="empty(session('username'))"}
 						<li><a href="{:url('Register/register')}">注册</a></li>
-
+						{else/}<li><a href="{:url('Out/out')}">退出</a></li>
+						{/if}
+						
+						{if condition="empty(session('username'))"}
 						<li><a href="{:url('Login/login')}">登录</a></li>
-
+						{else/}<li><a href="{:url('User/user')}">欢迎&nbsp;&nbsp;{$Request.session.username}</a></li>
+						{/if}
 					</ul>
 
 				</div>
 
 			</div>
-
 			<div class="header-conter">
 
-				<a href="index.html" class="left"><img src="images/logo.jpg"></a>
+				<a href="{:url('index/index')}" class="left"><img src="__STATIC__/__IMAGE1__/logo.jpg"></a>
 
 				<div class="middle">
 
 					<div class="search">
+						<form action="{:url('search/search')}" method="POST">
+						<input type="text" class="btn" name="search" />
 
-						<input type="text" class="btn" />
-
-						<span>搜索</span>
-
+						<button>搜索</button>
+						</form>
 					</div>
 
 					<i>大家都在搜：<a href="pro_details.html">连衣裙</a>  <a href="pro_details.html">连体衣 </a> <a href="pro_details.html">儿童毯</a>  <a href="pro_details.html">帽子</a></i>
 
 				</div>
 
-				<a class="right"><img src="images/index01.jpg"></a>
+				<a class="right"><img src="__STATIC__/__IMAGE1__/index01.jpg"></a>
 
 			</div>
 
@@ -61,7 +65,7 @@
 
 					<ul>
 						{volist name='nav' id='val'}
-						<li><a href="index.html">{$val.title}</a></li>
+						<li><a href="{:url($val['urls'])}">{$val.title}</a></li>
 
 						<!-- <li><a href="shop_list.html">特惠购</a></li>
 

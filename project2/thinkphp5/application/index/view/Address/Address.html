@@ -22,7 +22,7 @@
 		<!--conter-->		
 
 		<div class="conter">
-			<h2><a href="index.html">首页</a><a href="user.html">>会员中心</a>>地址管理</h2>
+			<h2><a href="{:url('index/index')}">首页</a><a href="{:url('user/user')}">>会员中心</a>>地址管理</h2>
 
 			<div class="conter-left">
 				<ul>
@@ -42,7 +42,7 @@
 
 						<h1>个人中心</h1>
 
-						<a href="address.html" class="on">地址管理</a>
+						<a href="{:url('address')}" class="on">地址管理</a>
 
 						<a href="#">我的收藏</a>
 
@@ -112,8 +112,7 @@
 
 					<div class="default">
 						<label>
-							<input type="checkbox"/>
-
+							<input type="checkbox" name="default" value="1"/>
 							<span>设为默认</span>
 						</label>	
 					</div>
@@ -183,9 +182,11 @@
 								<td class="td-phone">{$val.phone}</td>
 								<td class="td-hold">{$val.province.$val.city.$val.county.$val.village}</td>
 								<td class="td-handle">
-									<span class="delete">删除</span>
-									<span class="alter">修改</span>
-									<label><i id="mo">设为</i>默认</label>
+									<a href="{:url('delete')}?id={$val.id}" style="color:black;"><span class="delete">删除</span></a>
+									<a href="{:url('edit')}?id={$val.id}" style="color:black;"><span class="alter">修改</span></a>
+									{if condition="$val.default_id!==1"}
+									<a onClick="def_address({$val['id']})" class="address">设为默认</a>
+									{/if}
 								</td>
 							</tr>
 							{/volist}
@@ -501,6 +502,28 @@
 				
 
 	</body>
-
+	<script>
+		function def_address(id){
+			var address_id = id
+			data = {
+				'aid':address_id,
+			}
+			//alert(address_id)
+			$.ajax({
+				url:"{:url('address/default_address')}",
+				type:'post',
+				dataType:'json',
+				data:data,
+				success:function(info){
+					if(info.code==1){
+						alert('修改成功');window.location.href='address';
+					}
+				},
+				error:function(info){
+					alert('修改失败');
+				}
+			})
+		}
+	</script>
 </html>
 

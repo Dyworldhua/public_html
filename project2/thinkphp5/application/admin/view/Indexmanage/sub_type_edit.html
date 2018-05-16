@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2{
+            font-weight:normal;
+        }
+    </style>
+</head>
+<body>
+    <h2>首页内容分类编辑</h2>
+    <form action="{:url('sub_type_update')}" method="POST">
+        <p>分类名称：<input type="text" name="type" value="{$type.type}"/></p>
+        <input type="hidden" name="id" value="{$type.id}"/>
+        <input type="submit" value="更改"/>
+    </form>
+</body>
+</html>

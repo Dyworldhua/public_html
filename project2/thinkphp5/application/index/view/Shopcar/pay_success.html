@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>支付成功</title>
+
+		<link rel="stylesheet" type="text/css" href="__STATIC__/__CSS1__/commen.css" />
+
+		<link rel="stylesheet" type="text/css" href="__STATIC__/__CSS1__/pay_success.css" />
+
+		<script type="text/javascript" src="__STATIC__/__JS1__/jquery-1.11.0.js" ></script>
+
+		<script type="text/javascript" src="__STATIC__/__JS1__/login_user.js" ></script>
+
+	</head>
+
+	{include file="Common/header"}
+		<!--头部 end-->
+
+		<div class="conter">
+
+			<div class="pay-back">
+
+				<img src="__STATIC__/__IMAGE1__/pay_success.jpg" />
+
+			</div>
+
+			<div class="middle">
+
+				<div class="mid-back">
+
+						<img src="__STATIC__/__IMAGE1__/pay_failure.png" />
+
+					</div>
+
+				<div class="mid-contre">
+
+					<div class="left">
+
+						<img src="__STATIC__/__IMAGE1__/pay_success-left.png" />
+
+					</div>
+
+					<div class="right">
+
+						<h1>你已支付成功</h1>
+
+						<div class="text">
+
+							<p>尊敬的客户</p>
+
+							<p>你已成功完成订单支付，订单详情如下：</p>
+
+							<p>订单号：{$settle.number}</p>
+
+							<p>支付金额：￥{$Request.session.price}.00</p>
+
+							<p>订单状态：已发货/待发货</p>
+
+							<p>收货人：{$address.name}</p>
+
+							<p>收货地址：{$address.province.$address.city.$address.county.$address.village.$address.site}</p>
+
+							<a href="{:url('index/index')}" class="text-left">返回首页</a><a href="pay.html" class="text-right">返回支付</a>
+
+						</div>
+
+					</div>	
+
+				</div>
+
+				<!--mid-contre-->
+
+			</div>
+
+		</div>
+
+
+
+		<div class="footer">
+
+			<div class="footer-top">
+
+				<a class="code-left"><img src="__STATIC__/__IMAGE1__/code01.jpg"><span>官方微信</span></a>
+
+				<a class="code-right"><img src="__STATIC__/__IMAGE1__/code02.jpg"><span>官方微博</span></a>
+
+				<ul>
+
+					<li>
+
+						<i>7</i>
+
+						<span>七天无理由退货</span>
+
+					</li>
+
+					<li>
+
+						<i>优</i>
+
+						<span>品质保证</span>
+
+					</li>
+
+					<li>
+
+						<i>特</i>
+
+						<span>特色服务体验</span>
+
+					</li>
+
+					<li>
+
+						<i>？</i>
+
+						<span>帮助中心</span>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			
+
+			<!--footer-top-->
+
+			<div class="footer-bottom">
+
+				<p>
+
+					<a href="about.html"><i>关于我们 </i></a>
+
+					<a href="#"><i>购物袋 </i></a>
+
+					<a href="#"><i>我的账户</i></a>
+
+					<a href="#"><i>顾客查询</i></a>
+
+					<a href="#"><i>产品优点</i></a>
+
+					<a href="#"><i>零售网络</i></a>
+
+					<a href="contact_us.html"><i>联络我们</i></a>
+
+					<a href="#">Hallmark Babies 官方网站 Officia</a>
+
+					<a href="#">Website</a>
+
+				</p>
+
+				<p><a class="left">Copyright © 2009-2016 MYBABYKID.COM 版权所有 </a><a href="#" class="right">使用条款 | 隐私及安全条例</a></p>
+
+				<p> © Hallmark Cards, Inc.</p>
+
+				<div class="attention">
+
+					<p>立即关注</p>
+
+					<p>最新产品</p>
+
+					<p>优惠信息发布</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
+

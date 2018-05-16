@@ -42,18 +42,21 @@
         <tr>
             <td>产品ID</td>
             <td>产品名称</td>
+            <td>产品类型</td>
             <td>产品售价</td>
             <td>产品图片</td>
             <td>产品库存</td>
             <td>产品月销量</td>
             <td>产品评价</td>
             <td>产品积分</td>
+            <td>首页内容类型</td>
             <td>产品操作</td>
         </tr>
         {volist name='product' id='val'}
         <tr>
             <td>{$val.id}</td>
             <td>{$val.title}</td>
+            <td>{$val.type_name}</td>
             <td>{$val.price}</td>
             <td>
                 <img src="__UPLOAD__{$val.picture}" width="100px" height="100px"/>
@@ -62,6 +65,7 @@
             <td>{$val.sale}</td>
             <td>{$val.score}</td>
             <td>{$val.integral}</td>
+            <td>{$val.index_sub_type}</td>
             <td><a href="{:url('Proedit/pro_edit')}?id={$val.id}">编辑</a>|<a href="{:url('Prodelete/delete')}?id={$val.id}">删除</a></td>
         </tr>
         {/volist}

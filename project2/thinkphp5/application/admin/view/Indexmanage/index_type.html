@@ -50,16 +50,16 @@
                 {else /}{$val.type_name}
                 {/if}
             </td>
-            <td><a href="{:url('type_edit')}?id={$val.id}">编辑</a><a href="{:url('delete')}?id={$val.id}">删除</a></td>
+            <td><a href="{:url('index_type_edit')}?id={$val.id}">编辑</a><a href="{:url('delete')}?id={$val.id}">删除</a></td>
         </tr>
         {/volist}
     </table>
     <div class="page">
-    <a href="{:url('Protype')}?page=<?php if($current_page-1>0){echo $current_page-1;}else{echo 1;}?>">上一页</a>
+    <a href="{:url('index_type')}?page=<?php if($current_page-1>0){echo $current_page-1;}else{echo 1;}?>">上一页</a>
     {for start="1" end="$page_max+1"}
-    <a href="{:url('Protype')}?page={$i}" class="<?php if($current_page==$i){echo 'current';}?>">{$i}</a>
+    <a href="{:url('index_type')}?page={$i}" class="<?php if($current_page==$i){echo 'current';}?>">{$i}</a>
     {/for}
-    <a href="{:url('Protype')}?page=<?php if($current_page+1<=$page_max){echo $current_page+1;}else{echo $page_max;}?>">下一页</a>
+    <a href="{:url('index_type')}?page=<?php if($current_page+1<=$page_max){echo $current_page+1;}else{echo $page_max;}?>">下一页</a>
     </div>
 </body>
 </html>

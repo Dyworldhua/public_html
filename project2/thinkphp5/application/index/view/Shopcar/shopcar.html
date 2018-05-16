@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>我的购物车</title>
+
+		<link rel="stylesheet" type="text/css" href="__STATIC__/__CSS1__/commen.css" />
+
+		<link rel="stylesheet" type="text/css" href="__STATIC__/__CSS1__/shop_cart.css" />
+
+		<script type="text/javascript" src="__STATIC__/__JS1__/jquery-1.11.0.js" ></script>
+
+		<script type="text/javascript" src="__STATIC__/__JS1__/shop_cart.js" ></script>
+
+		<script type="text/javascript" src="__STATIC__/__JS1__/login_user.js" ></script>
+		<script type="text/javascript" src="__STATIC__/__JS1__/layer.js"></script>
+
+	</head>
+
+	{include file="Common/header"}
+
+		<!--头部 end-->
+
+		<div class="conter">
+
+			<div class="middle">
+				<div class="mid-contre">
+
+					<h2>当前位置：<a href="{:url('index/index')}">首页</a>>我的购物车</h2>
+
+					<div class="top">
+
+						<ul>
+
+							<li class="default">我的购物车</li>
+
+							<li>确认订单</li>
+
+							<li>提交订单</li>
+
+						</ul>
+
+					</div>
+
+					<div class="shop_cart">
+
+						<div class="shop-title">
+
+							<div class="left">
+
+								<ul>
+
+									<li class="on">全部商品</li>
+
+									<li>猜你喜欢</li>
+
+								</ul>	
+
+							</div>
+
+							<div class="right">
+
+								<label>配送至：</label>
+
+								<select>
+
+									<option>成都市高新区</option>
+
+									<option>成都市高新区</option>
+
+								</select>
+
+							</div>
+
+						</div>
+
+						<div class="shop_box">
+
+							<ul>
+
+								<li>
+
+									<table>
+
+										<thead>
+
+											<tr>
+
+												<th>
+
+													<label>
+
+														<input type="checkbox" />
+
+														全选
+
+													</label>
+
+												</th>
+
+												<th>商品</th>
+
+												<th>商品属性</th>
+
+												<th>单价（元）</th>
+
+												<th>数量</th>
+
+												<th>小计（元）</th>
+
+												<th>操作</th>
+
+											</tr>
+
+										</thead>
+										<!-- <form action="{:url('settlement')}" method="POST"> -->
+										<tbody id="tbody">												
+														{volist name='product' id='val'}
+														<tr id="tr{$val.id}">
+			
+															<td class="shop_img">
+																
+																<label><input type="checkbox" name="select" id="check" value="{$val.id}"/></label>
+															
+																<a href="{:url('prodetails/prodetails')}?id={$val.product_id}"><img src="__UPLOAD__{$val.pro_picture}"></a>
+			
+															</td>
+			
+															<td class="shop_title"><span><a href="{:url('prodetails/prodetails')}?id={$val.product_id}">{$val.pro_title}</a></span></td>
+			
+															<td class="shop_color"><span id="color">【{$val.color}】{$val.type}</span></td>
+			
+															<td class="univalence">
+			
+																<span class="cost">{$val.pro_price}.00</span>
+			
+																<button id="Sales">特价产品</button>
+			
+															</td>
+			
+															<td class="shop_num">
+			
+																<div class="num">
+			
+																	<button type="button" class="prd_subNum" id="reduceb"  onclick="">-</button>
+			
+																	<input type="text" id="prd_numb" value="{$val.pro_num}" class="prd_num" name="number[]" maxlength="3">
+			
+																	<button type="button" class="prd_addNum" id="addb" onclick="">+</button>
+			
+																</div>
+			
+															</td>
+			
+															<td class="shop_price"><span class="total">{$val.pro_price}.00</span></td>
+			
+															<td class="shop_handle">
+			
+																<a href="{:url('shopcar/delete')}?id={$val.id}" onClick="return confirm('确定删除当前产品吗?');"><span class="delete" id="remove">删除</span></a>
+			
+																<span class="attention">添加关注</span>
+			
+															</td>
+			
+														</tr>
+														{/volist}
+
+										</tbody>
+
+									</table>	
+
+								</li>
+
+							</ul>
+
+							
+							<ul style="display: none;">
+
+								<li class="like"><a>猜你喜欢</a></li>
+
+							</ul>
+						</div>
+
+						
+
+						<div class="shop-bot">
+							<ul>
+
+								<li>
+
+									<label>
+
+										<input type="checkbox" />
+
+										全选
+
+									</label>
+
+								</li>
+
+								<li class="delete">
+
+									<a onclick="datadelete()"><span id="allremove">删除选中商品</span></a>
+									<!-- <button class="del"><span id="allremove">删除选中商品</span></button> -->
+									<!-- <span><button id="allremove">删除选中商品</button></span> -->
+									<!-- <input type="submit" value="删除选中商品" style="border:none;background:none;color:#666666;cursor:pointer;"/> -->
+								</li>
+							
+								<li class="attention">
+
+									<span>添加到关注</span>
+
+								</li>
+
+								<li class="eliminate">
+
+									<span>清除下柜商品</span>
+
+								</li>
+
+								<li>
+
+									<span>已选择<i>1</i>件商品</span>
+
+								</li>
+
+								<li>
+
+									<span>总价：￥<i>368</i>元</span>
+
+									<span>已节省：￥<a>0</a>元</span>
+
+								</li>
+
+								
+
+								<li>
+
+									<a><button onclick="settle()">结算</button></a>
+									<!-- <a onclick="settle()">结算</a> -->
+
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+				<!--mid-contre-->
+			</div>
+		<!-- </form> -->
+			<!--middle-->
+
+		</div>
+
+		<script>
+
+			$(function(){
+
+
+
+						
+
+			})
+
+		</script>
+
+		<div class="footer">
+
+			<div class="footer-top">
+
+				<a class="code-left"><img src="images/code01.jpg"><span>官方微信</span></a>
+
+				<a class="code-right"><img src="images/code02.jpg"><span>官方微博</span></a>
+
+				<ul>
+
+					<li>
+
+						<i>7</i>
+
+						<span>七天无理由退货</span>
+
+					</li>
+
+					<li>
+
+						<i>优</i>
+
+						<span>品质保证</span>
+
+					</li>
+
+					<li>
+
+						<i>特</i>
+
+						<span>特色服务体验</span>
+
+					</li>
+
+					<li>
+
+						<i>？</i>
+
+						<span>帮助中心</span>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			
+
+			<!--footer-top-->
+
+			<div class="footer-bottom">
+
+				<p>
+
+					<a href="about.html"><i>关于我们 </i></a>
+
+					<a href="#"><i>购物袋 </i></a>
+
+					<a href="#"><i>我的账户</i></a>
+
+					<a href="#"><i>顾客查询</i></a>
+
+					<a href="#"><i>产品优点</i></a>
+
+					<a href="#"><i>零售网络</i></a>
+
+					<a href="contact_us.html"><i>联络我们</i></a>
+
+					<a href="#">Hallmark Babies 官方网站 Officia</a>
+
+					<a href="#">Website</a>
+
+				</p>
+
+				<p><a class="left">Copyright © 2009-2016 MYBABYKID.COM 版权所有 </a><a href="#" class="right">使用条款 | 隐私及安全条例</a></p>
+
+				<p> © Hallmark Cards, Inc.</p>
+
+				<div class="attention">
+
+					<p>立即关注</p>
+
+					<p>最新产品</p>
+
+					<p>优惠信息发布</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
+
+<script>
+		
+		function datadelete(){
+			var val = document.getElementsByName('select'); // 获取当前复选框选中的购物车产品
+			var value_id = []; // 定义一个空数组
+			for( k in val){
+					if(val[k].checked){
+						value_id.push(val[k].value);
+					};
+				};
+			if(confirm("确认要删除吗？")){	
+				var data = {
+					'del_id' : value_id	
+				}
+					$.ajax({
+						url:"{:url('shopcar/datadelete')}",
+						type:'post',
+						dataType:'json',
+						data:data,
+						success: function(data){
+							if (data.code == 1) {
+								alert('删除成功')
+								for(key in data.id){
+									$("#tr"+data.id[key]).remove()
+								}
+							}
+						},
+						error: function(data){
+							alert('错误')
+						}
+					});
+				}
+		}
+		function settle(){
+			var val = document.getElementsByName('select'); // 获取当前复选框选中的购物车产品
+			var value_id = []; // 定义一个空数组
+			for( k in val){  // 将多个值拼接
+					if(val[k].checked){
+						value_id.push(val[k].value);
+					};
+				};
+			var data = {
+				'pro_id':value_id
+			}
+			$.ajax({
+				url:"{:url('shopcar/settlement')}",
+				type:'post',
+				dataType:'json',
+				data:data,
+				success:function(info){
+					if(info.code==1){
+						alert('请选择需要结算的商品');
+					}else if(info.code==2){
+						window.location.href=info.url;
+					}
+				},
+				error:function(info){
+					alert('发生未知错误');
+				}
+			})
+		}
+	</script>

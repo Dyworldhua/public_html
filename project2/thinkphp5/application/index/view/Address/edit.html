@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>地址管理</title>
+
+		<link rel="stylesheet" type="text/css" href="__STATIC__/__CSS1__/commen.css" />
+
+		<link rel="stylesheet" type="text/css" href="__STATIC__/__CSS1__/address.css" />
+
+		<script type="text/javascript" src="__STATIC__/__JS1__/jquery-1.11.0.js" ></script>
+
+		<script type="text/javascript" src="__STATIC__/__JS1__/login_user.js" ></script>
+
+	</head>
+		{include file="Common/header"}
+		<!--conter-->		
+
+		<div class="conter">
+			<h2><a href="{:url('index/index')}">首页</a><a href="{:url('user/user')}">>会员中心</a>>地址管理</h2>
+
+			<div class="conter-left">
+				<ul>
+					<li>
+
+						<h1>订单中心</h1>
+
+						<a href="order.html">我的订单</a>
+
+						<a href="#">我的回购订单</a>
+
+						<a href="#">我的意外保单</a>
+
+					</li>
+
+					<li>
+
+						<h1>个人中心</h1>
+
+						<a href="{:url('address')}" class="on">地址管理</a>
+
+						<a href="#">我的收藏</a>
+
+						<a href="#">消息提醒</a>
+
+						<a href="#">建议反馈</a>
+
+					</li>
+
+					<li>
+
+						<h1>个人中心</h1>
+
+						<a href="#">我的优惠券</a>
+
+						<a href="#">我的红包</a>
+
+						<a href="#">我的回购券</a>
+
+					</li>
+
+					<li>
+
+						<h1>服务中心</h1>
+
+						<a href="#">退款跟踪</a>
+
+						<a href="#">补办意外保</a>
+
+						<a href="#">以旧换新</a>
+
+					</li>
+				</ul>
+			</div>
+
+			<div class="conter-right">
+				<div class="mid-top">
+
+					<h3>修改收货地址</h3>
+                    <form action="{:url('update')}" method="POST">
+                        <input type="hidden" name="id" value="{$address.id}"/>
+					<label class="name">
+						<a><i>收货人姓名</i><input type="text" id="shname" name="name" value="{$address.name}" placeholder="长度不超过12个字"></a>
+
+						<a><i>收货人手机号</i><input type="text" id="phone" name="phone" value="{$address.phone}" placeholder="输入11位手机号"></a>	
+					</label>
+					<label class="site">
+
+						<i>收货人地址</i>
+
+						<input type="text" id="province" name="province" value="{$address.province}" placeholder="省/直辖市"/>
+
+						<input type="text" id="city" name="city" value="{$address.city}" placeholder="城市"/>
+
+						<input type="text" id="county" name="county" placeholder="区/县" value="{$address.county}"/>
+
+						<input type="text" id="village" name="village" placeholder="乡镇/街道" value="{$address.village}"/>
+
+					</label>
+
+					<label class="detail-site">
+
+						<i>详细地址</i>
+
+						<input type="text" id="site" name="site" placeholder="请输入不超过50个字的详细地址" value="{$address.site}"/>
+
+					</label>
+
+					<div class="default">
+						<label>
+							<input type="checkbox" name="default" value="1"/>
+							<span>设为默认</span>
+						</label>	
+					</div>
+
+                    <button id="hold">修改</button>
+                    </form>
+
+				</div>
+
+				<script>
+
+				$(function(){
+
+				
+
+					
+
+					$(".mid-top .default label").click(function(){
+
+						if($(this).find("input").is(":checked")){
+
+							$(this).find("input").removeAttr("checked")
+
+							$(this).removeClass("on")
+
+						}else{
+
+							$(this).find("input").prop("checked","checked")
+
+							$(this).addClass("on")
+
+						}
+
+					})
+
+				})
+
+					
+
+				</script>
+
+				
+
+				<!--mid-bottom-->
+			</div>
+		</div>
+
+				<script>
+
+//				$(function(){
+
+//						var Address = [];
+
+//						var tbody = document.getElementsByTagName("tbody");
+
+//							
+
+//						$("#hold").click(function(){
+
+//							var name = $("input#shname").val(),
+
+//								phone = $("input#phone").val(),
+
+//								province = $("input#province").val(),
+
+//								city = $("input#city").val(),
+
+//								county = $("input#county").val(),
+
+//								village = $("input#village").val(),
+
+//								site = $("input#site").val();
+
+//							local(name,phone,province,city,county,village,site)
+
+//						
+
+//						})
+
+//						
+
+//						var storage = window.localStorage;
+
+//						function local(name,phone,province,city,county,village,site){
+
+//							var data = {
+
+//							name:name,
+
+//							phone:phone,
+
+//							province:province,
+
+//							city:city,
+
+//							county:county,
+
+//							village:village,
+
+//							site:site
+
+//							}
+
+//							Address.push(data)
+
+//						 	storage.setItem("Address",JSON.stringify(Address))
+
+//						}
+
+//						
+
+//						var addlocal = storage.getItem("Address")
+
+//						var	addjon = JSON.parse(addlocal);
+
+//						
+
+//						
+
+//						if(addjon != null){
+
+//							for(var i=0;i<addjon.length;i++){
+
+//								Address.push(addjon[i])
+
+//							}
+
+//						}
+
+//						
+
+//						var dzoj = localStorage.getItem("proList");
+
+//						if(dzoj!=null){
+
+//							var Address = JSON.parse(dzoj);
+
+//							for(var i=0;i<Address.length;i++){	
+
+//								var tbody = document.getElementById("tbody");
+
+//								var tr = document.createElement("tr");						
+
+//								tbody.appendChild(tr);
+
+//								
+
+//								var td1 = document.createElement("td");
+
+//								td1.setAttribute("class","td-name");
+
+//								td1.innerHTML = Address[i].name;
+
+//								tr.appendChild(td1);
+
+//								
+
+//								var td2 = document.createElement("td");
+
+//								td2.setAttribute("class","td-phone");
+
+//								td2.innerHTML = Address[i].phone;
+
+//								tr.appendChild(td2);
+
+//								
+
+//								var td3 = document.createElement("td");
+
+//								td3.setAttribute("class","td-hold");
+
+//								td3.innerHTML = Address[i].province+Address[i].city+Address[i].county+Address[i].village+Address[i].site;
+
+//								tr.appendChild(td3);
+
+//								
+
+//								var td4 = document.createElement("td");
+
+//								td4.setAttribute("class","td-handle");
+
+//								tr.appendChild(td4);
+
+//								
+
+//								var span4_1 = document.createElement("span");
+
+//								span4_1.setAttribute("class","delete")
+
+//								span4_1.innerHTML = "删除";
+
+//								td4.appendChild(span4_1);
+
+//								
+
+//								var span4_2 = document.createElement("span");
+
+//								span4_2.setAttribute("class","alter")
+
+//								span4_2.innerHTML = "修改";
+
+//								td4.appendChild(span4_2);
+
+//								
+
+//								var lable4 = document.createElement("label");
+
+//								lable4.innerHTML = "默认";
+
+//								td4.appendChild(lable4);
+
+//								
+
+//								var i4 = document.createElement("i");
+
+//								i4.setAttribute("id","mo");
+
+//								i4.innerHTML = "设为";
+
+//								lable4.appendChild(i4)
+
+//							}
+
+//						}
+
+//				})
+
+//					
+
+					
+
+					/*********************************************/
+
+					//删除
+
+					$(".mid-bottom .delete").click(function(){
+
+						$(this).parents().parent("tr").remove()
+
+					})
+
+					
+
+					
+
+					$(".mid-bottom tbody>tr>td label").click(function(){
+
+						$(this).children("i").css("display","none")
+
+						$(this).parent().parent().siblings("tr").find("label").children("i").css("display","block")
+
+					})
+
+				</script>
+
+		<div class="footer">
+
+			<div class="footer-top">
+
+				<a class="code-left"><img src="images/code01.jpg"><span>官方微信</span></a>
+
+				<a class="code-right"><img src="images/code02.jpg"><span>官方微博</span></a>
+
+				<ul>
+
+					<li>
+
+						<i>7</i>
+
+						<span>七天无理由退货</span>
+
+					</li>
+
+					<li>
+
+						<i>优</i>
+
+						<span>品质保证</span>
+
+					</li>
+
+					<li>
+
+						<i>特</i>
+
+						<span>特色服务体验</span>
+
+					</li>
+
+					<li>
+
+						<i>？</i>
+
+						<span>帮助中心</span>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			
+
+			<!--footer-top-->
+
+			<div class="footer-bottom">
+
+				<p>
+
+					<a href="about.html"><i>关于我们 </i></a>
+
+					<a href="#"><i>购物袋 </i></a>
+
+					<a href="#"><i>我的账户</i></a>
+
+					<a href="#"><i>顾客查询</i></a>
+
+					<a href="#"><i>产品优点</i></a>
+
+					<a href="#"><i>零售网络</i></a>
+
+					<a href="contact_us.html"><i>联络我们</i></a>
+
+					<a href="#">Hallmark Babies 官方网站 Officia</a>
+
+					<a href="#">Website</a>
+
+				</p>
+
+				<p><a class="left">Copyright © 2009-2016 MYBABYKID.COM 版权所有 </a><a href="#" class="right">使用条款 | 隐私及安全条例</a></p>
+
+				<p> © Hallmark Cards, Inc.</p>
+
+				<div class="attention">
+
+					<p>立即关注</p>
+
+					<p>最新产品</p>
+
+					<p>优惠信息发布</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+				
+
+	</body>
+
+</html>
+
